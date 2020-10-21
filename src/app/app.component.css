@@ -12,9 +12,46 @@
     fill: white;
     stroke: chocolate;
 }
-#land,.footer {
-background-image: linear-gradient(to bottom, rgba(0,58,125,1) 0%, rgba(12,36,64,1) 100%);  
+
+footer{
+    background-color: #000000;
 }
-.footer>p,#pfoo,#Copyright{
-color: whitesmoke;
+
+#coti{
+    font-family: 'Exo 2', sans-serif;
+    font: 300;
+    font-size: 40px;
+    background: -webkit-linear-gradient(#FF8F48,#FF6963);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#encu{
+    font-family: 'Exo 2', sans-serif;
+    font: 300;
+    color: #FF6963;
+}
+
+#land{
+    border-color: deeppink!important;
+    border-radius: 50px!important;
+}
+#nom{
+    font-family: 'Exo 2', sans-serif;
+    font: 300;
+
+}
+#ase{
+    font-family: 'Exo 2', sans-serif;
+    font: 400;
+    font-style: italic;
+    font-size: 25px;
+}
+hr{
+    background-color:chocolate;
+    height: 2px; 
+}
+#btnayuda{
+    height: 30px;
+    width: 30px;
 }
