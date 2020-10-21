@@ -32,20 +32,17 @@ footer{
     color: #FF6963;
 }
 
-#land{
-    border-color: deeppink!important;
-    border-radius: 50px!important;
-}
 #nom{
     font-family: 'Exo 2', sans-serif;
     font: 300;
 
 }
-#ase{
+#ase,#seg{
     font-family: 'Exo 2', sans-serif;
     font: 400;
     font-style: italic;
     font-size: 25px;
+    padding-left: 10px;
 }
 hr{
     background-color:chocolate;
@@ -57,11 +54,29 @@ hr{
 }
 
 
-#avisos a,#encuentranos,#labelp label,#labelp p, #mayorazgo,#lla,#atcli{
+#avisos a,#encuentranos{
     font-family: 'Exo 2', sans-serif;
     font: 900;
     font-size: 17px;
     color: white;
 
 }
+#labelp label,#labelp p{
+    font-family: 'Exo 2', sans-serif;
+    font: 900;
+    font-size: 13px;
+    color: white;
+}
 
+.mlef {
+    margin-left: .5rem !important;
+}
+.mrig {
+    margin-right: .5rem !important;
+}
+.sa{
+    font-family: 'Montserrat', sans-serif;
+    font: 900;
+    font-weight: bold;
+    font-size: 20px;
+}
