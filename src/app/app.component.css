@@ -55,3 +55,13 @@ hr{
     height: 30px;
     width: 30px;
 }
+
+
+#avisos a,#encuentranos,#labelp label,#labelp p, #mayorazgo,#lla,#atcli{
+    font-family: 'Exo 2', sans-serif;
+    font: 900;
+    font-size: 17px;
+    color: white;
+
+}
+
