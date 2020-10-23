@@ -1,2 +1,125 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#btnayuda{
+    background-color: chocolate;
+    border-color: black;
+    color: white;  
+}
+#logoempresa{
+    width: 100px;
+    height: 100px;
+}
+#iconomes{
+    color: chocolate;
+    fill: white;
+    stroke: chocolate;
+}
+
+
+
+#coti{
+    font-family: 'Exo 2', sans-serif;
+    font: 300;
+    font-size: 40px;
+    background: -webkit-linear-gradient(#FF8F48,#FF6963);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#encu{
+    font-family: 'Exo 2', sans-serif;
+    font: 300;
+    color: #FF6963;
+}
+
+#nom{
+    font-family: 'Exo 2', sans-serif;
+    font: 300;
+
+}
+#ase,#seg{
+    font-family: 'Exo 2', sans-serif;
+    font: 400;
+    font-style: italic;
+    font-size: 25px;
+    padding-left: 10px;
+}
+hr{
+    background-color:chocolate;
+    height: 2px; 
+}
+#btnayuda{
+    height: 30px;
+    width: 30px;
+}
+#avisos a,#encuentranos{
+    font-family: 'Exo 2', sans-serif;
+    font: 900;
+    font-size: 17px;
+    color: white;
+
+}
+#labelp label,#labelp p{
+    font-family: 'Exo 2', sans-serif;
+    font: 900;
+    font-size: 13px;
+    color: white;
+}
+
+.mlef {
+    margin-left: .5rem !important;
+}
+.mrig {
+    margin-right: .5rem !important;
+}
+.sa{
+    font-family: 'Montserrat', sans-serif;
+    font: 900;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer{
+    background-color: #000000;
+    
+}
+
+
+.mrtop{
+margin-top: 4.5rem;;
+}
+
+
+
+.redondo {
+background-color: black;
+-webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+display: inline-block;
+font: inherit;
+line-height: 1.5em;
+padding: 0.5em 3.5em 0.5em 1em;
+margin: 0;      
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-appearance: none;
+-moz-appearance: none;
+
+background-color: white;
+   background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(  #FF8F48 , #FF6963);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
