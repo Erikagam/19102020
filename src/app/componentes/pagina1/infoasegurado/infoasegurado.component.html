@@ -52,7 +52,7 @@
           <div class="col">
               <div class="row">
                   <div class="col">
-                    <select class="redondo" [(ngModel)]="mes" (change)="capturarmes()">
+                    <select class="classic" [(ngModel)]="mes" (change)="capturarmes()">
                         <option value="">Selecciona una opción</option>
                         <option *ngFor="let mes of meses">
                           {{mes}}
@@ -61,7 +61,7 @@
                     <p [hidden]="mes==''">Has seleccionado la opción # {{ vermes }}</p>
                   </div>
                   <div class="col">
-                    <select class="redondo" [(ngModel)]="dia" (change)="capturardia()">
+                    <select class="classic" [(ngModel)]="dia" (change)="capturardia()">
                         <option value="">Selecciona una opción</option>
                         <option *ngFor="let dia of dias">
                           {{dia}}
@@ -71,7 +71,7 @@
                     <p [hidden]="dia==''">Has seleccionado la opción # {{ verdia }}</p>
                   </div>
                   <div class="col">
-                    <select class="redondo" [(ngModel)]="fechaann" (change)="capturarfechaann()">
+                    <select class="classic" [(ngModel)]="fechaann" (change)="capturarfechaann()">
                         <option value="">Selecciona una opción</option>
                         <option *ngFor="let fechaann of fechaannos">
                           {{fechaann}}
@@ -84,7 +84,7 @@
           </div>
           <div class="col">
               <div class="row">
-                <select class="redondo">
+                <select class="classic">
                     <option value="">Selecciona una opción</option>
                     <option>
                     </option>

@@ -28,13 +28,13 @@
               Mi auto es:
             </div>
             <div class="row">
-                <select class="redondo" [(ngModel)]="modelo" (change)="capturarmodelo()">
+                <select class="classic" [(ngModel)]="modelo" (change)="capturarmodelo()">
                     <option value="0">Selecciona una opción</option>
                     <option *ngFor="let dato of datos">
                       {{dato}}
                     </option>
                 </select>
-                <p [hidden]="modelo == '0'">Haz seleccionado la opción # {{ vermodelo }}</p>
+                <p [hidden]="modelo == '0'">Has seleccionado la opción # {{ vermodelo }}</p>
             </div>
           </div>
           <div class="col">
@@ -42,13 +42,13 @@
               Año
             </div>
             <div class="row">
-                <select class="redondo" [(ngModel)]="anno" (change)="capturaranno()">
+                <select class="classic" [(ngModel)]="anno" (change)="capturaranno()">
                     <option value="0">Selecciona una opción</option>
                     <option *ngFor="let dato of datos">
                       {{dato}}
                     </option>
                 </select>
-                <p [hidden]="anno == '0'">Haz seleccionado la opción # {{ veranno }}</p>
+                <p [hidden]="anno == '0'">Has seleccionado la opción # {{ veranno }}</p>
             </div>
           </div>
           <div class="col">
@@ -56,13 +56,13 @@
               Marca
             </div>
             <div class="row">
-                <select class="redondo" [(ngModel)]="marca" (change)="capturarmarca()">
+                <select class="classic" [(ngModel)]="marca" (change)="capturarmarca()">
                     <option value="0">Selecciona una opción</option>
                     <option *ngFor="let dato of datos">
                       {{dato}}
                     </option>
                 </select>
-                <p [hidden]="marca == '0'">Haz seleccionado la opción # {{ vermarca }}</p>
+                <p [hidden]="marca == '0'">Has seleccionado la opción # {{ vermarca }}</p>
             </div>
           </div>
           <div class="col">
@@ -70,13 +70,13 @@
               Descripción
             </div>
             <div class="row">
-                <select class="redondo" [(ngModel)]="descripcion" (change)="capturardescripcion()">
+                <select class="classic" [(ngModel)]="descripcion" (change)="capturardescripcion()">
                     <option value="0">Selecciona una opción</option>
                     <option *ngFor="let dato of datos">
                       {{dato}}
                     </option>
                 </select>
-                <p [hidden]="descripcion == '0'">Haz seleccionado la opción # {{ verdescripcion }}</p>
+                <p [hidden]="descripcion == '0'">Has seleccionado la opción # {{ verdescripcion }}</p>
             </div>
           </div>
       </div>
