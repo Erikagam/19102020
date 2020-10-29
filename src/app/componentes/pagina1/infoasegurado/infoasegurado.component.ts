@@ -23,6 +23,7 @@ export class InfoaseguradoComponent implements OnInit {
   vermes: string        = '';
   capturarmes() {
     this.vermes = this.mes;
+    this.calculabis()
   }
   
 
@@ -40,10 +41,13 @@ export class InfoaseguradoComponent implements OnInit {
   fechaann: string  = ''; // Iniciamos fechaann 
   verfechaann: string        = '';
   capturarfechaann() {
-    
     this.verfechaann = this.fechaann;
-    // aquiinicia
-    var numerican = Number(this.fechaann);
+    this.calculabis()
+    }
+
+  calculabis() {
+    if (this.fechaann!='' && this.vermes!='') {
+      var numerican = Number(this.fechaann);
     numerican%4==0 ?(numerican%100==0 ?(numerican%400==0 ?(this.bisiesto=true) : (this.bisiesto=false)) : (this.bisiesto=true)) : (this.bisiesto=false)
     //this.bisiesto ? (console.log(this.mesdiabis)) :(console.log(this.mesdia))
     if (this.bisiesto) {
@@ -70,6 +74,7 @@ export class InfoaseguradoComponent implements OnInit {
       }
       }
     }
+  }
     ngOnInit( ): void {
       this.mesdiabis=[
         ['Enero',31],

@@ -22,6 +22,6 @@ import {InfovehiculoComponent} from './componentes/pagina1/infovehiculo/infovehi
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent,HeaderComponent,FooterComponent,InfovehiculoComponent]
+  bootstrap: [AppComponent,HeaderComponent,FooterComponent,InfovehiculoComponent,InfoaseguradoComponent]
 })
 export class AppModule { }
