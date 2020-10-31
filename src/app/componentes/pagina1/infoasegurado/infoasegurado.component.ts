@@ -13,11 +13,14 @@ export class InfoaseguradoComponent implements OnInit {
   fechaannos;
   mesdiabis: (string | number)[][];
   mesdia: (string | number)[][];
-  constructor(){
-    
-
   
+  constructor(){
   } 
+ 
+
+
+
+
 
   mes: string  = ''; // Iniciamos mes 
   vermes: string        = '';
