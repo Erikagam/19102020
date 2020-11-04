@@ -268,5 +268,64 @@ margin-right: 0px;
 #rect2,#rect3,#rect4{
   margin-left: -6px;
 }
+.poliza,.pago,.descuento{
+  height: 200px;
+  width: 95px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color:#ebebeb !important;
+  border-radius: 50px !important;
+  color: #000000 !important;
+  /* display: ruby-base-container !important; */
+
+}
+/* #ampliaplus{
+  background-image: url('./assets/images/AmpliaPlus.png');
+  background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+} */
+.card{
+  border-radius: 2.25rem !important;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.card-header:first-child {
+  border-radius: calc(2.25rem - 1px) calc(2.25rem - 1px) 0 0 !important;
+  background-color: #21c7ed;
+}
+.card > .list-group:last-child {
+  border-bottom-width: 0px;
+  border-bottom-right-radius: calc(2.25rem - 1px) !important;
+  border-bottom-left-radius: calc(2.25rem - 1px) !important;
+}
 
 
+
+ .Noselect {
+  height: 200px;
+  width: 95px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color:#ebebeb !important;
+  border-radius: 50px !important;
+}
+.Select{
+  height: 200px;
+  width: 95px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background: -webkit-linear-gradient(#FF8F48,#FF6963);
+    border-style: none;
+    border-radius: 40px;
+    color: white !important;
+}
+.Noselectap #ap{
+  fill: #c5c5c4
+}
+.Selectap #ap{
+  fill: white;
+}
