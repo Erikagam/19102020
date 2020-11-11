@@ -1,0 +1,60 @@
+#estesi{
+  border-radius: 2.25rem !important;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+ #estesi >.card-header:first-child{
+  border-radius: calc(2.25rem - 1px) calc(2.25rem - 1px) 0 0 !important;
+  background-color: #21c7ed;
+}
+#estesi> .list-group:last-child  {
+  border-bottom-width: 0px;
+  border-bottom-right-radius: calc(2.25rem - 1px) !important;
+  border-bottom-left-radius: calc(2.25rem - 1px) !important;
+}
+
+
+.poliza,.pago,.descuento{
+    height: 200px;
+    width: 95px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color:#ebebeb !important;
+    border-radius: 50px !important;
+    color: #000000 !important;
+    /* display: ruby-base-container !important; */
+  }
+ .Noselect {
+    height: 200px;
+    width: 95px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* background-color:#ebebeb !important; */
+    background-color:#ff0505 !important;
+    border-radius: 50px !important;
+  }
+  .Select{
+    height: 200px;
+    width: 95px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background: -webkit-linear-gradient(#FF8F48,#FF6963);
+      border-style: none;
+      border-radius: 40px;
+      color: white !important;
+  }
+  .Noselectap #ap{
+    fill: #c5c5c4
+  }
+  .Selectap #ap{
+    fill: white;
+  }
+  .Noselecta #a{
+    fill: #c5c5c4
+  }
+  .Selecta #a{
+    fill: white;
+  }
+  
