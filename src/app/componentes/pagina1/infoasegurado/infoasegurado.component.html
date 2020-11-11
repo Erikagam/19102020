@@ -1,5 +1,5 @@
 <div class="container my-5 mx-0 mw-100" id="inase">
-<div class="card">
+<div class="card" id="estesi">
     <div class="card-body">
       <div class="row">
         <div class="col-1">
@@ -70,36 +70,54 @@
               Mi fecha de nacimiento es: 
             </div>  
             <div class="row">
-              <div class="col-md-5 col-sm-4" style="padding-left: 0px;padding-right: 20px;">
+              <div class="col-md-4 col-sm-4" >
                 <!-- style="margin-left: -5px;padding-right: 7px;" -->
-                    <select  style="padding-right:2.7em;" class="classic" [(ngModel)]="mes" (change)="capturarmes()">
-                        <option value="">Mes</option>
-                        <option class="item" *ngFor="let mes of meses">
-                          {{mes}}
-                        </option>
-                    </select>
-                    <p [hidden]="mes==''">Has seleccionado la opción # {{ vermes }}</p>
+                    <div class="row">
+                      <div class="dropdown">
+                        <button class="btn"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"  >
+                          Mes
+                        </button>
+                        <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" (click)="capturarmes($event)" *ngFor="let mes of meses" role="option">
+                            {{ mes }}
+                          </a>
+                        </div>
+                        <p [hidden]="mes==''">Has seleccionado la opción # {{ vermes }}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-3 col-sm-4" style="padding-right:20px;" >
+                  <div class="col-md-4 col-sm-4" >
                     <!-- style="margin-left: -5px; padding-right: 14px; padding-left: 20px;" -->
-                    <select  style="padding-right: 2.5em;" class="classic" [(ngModel)]="dia" (change)="capturardia()">
-                        <option value="">Día</option>
-                        <option *ngFor="let dia of dias">
-                          {{dia}}
-                        </option>
-                    </select>
-
-                    <p [hidden]="dia==''">Has seleccionado la opción # {{ verdia }}</p>
+                    <div class="row">
+                      <div class="dropdown">
+                        <button class="btn"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"  >
+                          Día
+                        </button>
+                        <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" (click)="capturardia($event)" *ngFor="let dia of dias" role="option">
+                            {{ dia }}
+                          </a>
+                        </div>
+                        <p [hidden]="dia==''">Has seleccionado la opción # {{ verdia }}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-4 col-sm-4" style="padding-right:0px;" >
+                  <div class="col-md-4 col-sm-4" >
                     <!-- style="margin-left: -5px;padding-right: 20px;padding-left: 20px;" -->
-                    <select style="padding-right: 2.5em;" class="classic" [(ngModel)]="fechaann" (change)="capturarfechaann()">
-                        <option value="">Año</option>
-                        <option class="hovi"  *ngFor="let fechaann of fechaannos">
-                          {{fechaann}}
-                        </option>
-                    </select>
-                    <p [hidden]="fechaann==''">Has seleccionado la opción # {{ verfechaann }}</p>
+                    <div class="row">
+                      <div class="dropdown">
+                        <button class="btn"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"  >
+                          Año
+                        </button>
+                        <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" (click)="capturarfechaann($event)" *ngFor="let fechaann of fechaannos" role="option">
+                            {{ fechaann }}
+                          </a>
+                        </div>
+                        <p [hidden]="fechaann==''">Has seleccionado la opción # {{ verfechaann }}</p>
+                      </div>
+                    </div>
+
                   </div>
               </div>
           </div>
@@ -110,11 +128,17 @@
                 Mi código postal es:
               </div>
               <div class="row">
-                <select style="padding-right: 3.5em;margin-left: 15px;" class="classic">
-                    <option value="">Selecciona una opción</option>
-                    <option>
-                    </option>
-                </select>
+                <div class="dropdown">
+                  <button class="btn"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"  >
+                   Código Postal  
+                  </button>
+                  <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" (click)="capturarfechaann($event)" *ngFor="let fechaann of fechaannos" role="option">
+                      {{ fechaann }}
+                    </a>
+                  </div>
+                  <p [hidden]="fechaann==''">Has seleccionado la opción # {{ verfechaann }}</p>
+                </div>
               </div>
           </div>
       </div>

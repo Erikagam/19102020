@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { disableDebugTools } from '@angular/platform-browser';
 
+
 @Component({
   selector: 'app-infoasegurado',
   templateUrl: './infoasegurado.component.html',
@@ -16,41 +17,38 @@ export class InfoaseguradoComponent implements OnInit {
   
   constructor(){
   } 
- 
-
-
-
-
-
   mes: string  = ''; // Iniciamos mes 
   vermes: string        = '';
-  capturarmes() {
-    this.vermes = this.mes;
+  capturarmes(evento) {
+    // console.log(evento.target.textContent)
+    this.vermes=evento.target.textContent
+    this.mes=evento.target.value
     this.calculabis()
-  }
-  
-
-
-  dia: string  = ''; // Iniciamos dia
-  
-
-// console.log(this.mesdiabis[0][1])//DIAS
-// console.log(this.mesdiabis[0][0])//MESES
-  verdia: string        = '';
-  capturardia() {
-    this.verdia = this.dia;
   }
   
   fechaann: string  = ''; // Iniciamos fechaann 
   verfechaann: string        = '';
-  capturarfechaann() {
-    this.verfechaann = this.fechaann;
+  capturarfechaann(evento) {
+    // console.log(evento.target.textContent)
+    this.verfechaann=evento.target.textContent
+    this.fechaann=evento.target.value
     this.calculabis()
     }
+  
+
+  dia: string  = ''; // Iniciamos dia
+// console.log(this.mesdiabis[0][1])//DIAS
+// console.log(this.mesdiabis[0][0])//MESES
+  verdia: string        = '';
+  capturardia(evento) {
+    
+  }
+  
 
   calculabis() {
-    if (this.fechaann!='' && this.vermes!='') {
-      var numerican = Number(this.fechaann);
+    if (this.verfechaann!='' && this.vermes!='') {
+      var numerican = Number(this.verfechaann);
+      console.log(this.verfechaann+' ' + this.vermes)
     numerican%4==0 ?(numerican%100==0 ?(numerican%400==0 ?(this.bisiesto=true) : (this.bisiesto=false)) : (this.bisiesto=true)) : (this.bisiesto=false)
     //this.bisiesto ? (console.log(this.mesdiabis)) :(console.log(this.mesdia))
     if (this.bisiesto) {
@@ -66,9 +64,10 @@ export class InfoaseguradoComponent implements OnInit {
       }
     } else {
       console.log(numerican +' '+"NO BISIESTO")
-      for (let index = 0; index < 12; index++) {
-        if (this.mesdia[index][0]==this.vermes) {
+      for (let index = 0; this.mesdia.length; index++) {
+        if (this.mesdia[index][0]===this.vermes) {
           var hastaaqui = Number(this.mesdia[index][1]);
+          console.log(this.mesdia[index][1])
           console.log( hastaaqui+' '+ this.vermes)
           for (let index = 1 ; index <= hastaaqui; index++) {
             this.dias.push(index)
@@ -76,6 +75,8 @@ export class InfoaseguradoComponent implements OnInit {
         }
       }
       }
+    }else{
+      console.log("Te falta")
     }
   }
     ngOnInit( ): void {

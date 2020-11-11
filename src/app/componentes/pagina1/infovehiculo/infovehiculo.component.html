@@ -1,5 +1,5 @@
 <div class="container my-5 mx-0 mw-100" id="inave">
-<div class="card">
+<div class="card" id="estesi">
     <div class="card-body">
       <div class="row ">
           <div class="col-1 ">
@@ -22,63 +22,80 @@
           </div>
       </div>
       <div class="row">
-          <div class="col">
+          <div class="col-md-3 col-sm-4">
             <div class="row">
               Mi auto es:
             </div>
             <div class="row">
-                <select class="classic" [(ngModel)]="modelo" (change)="capturarmodelo()">
-                    <option value="0">Selecciona una opción</option>
-                    <option *ngFor="let dato of datos">
-                      {{dato}}
-                    </option>
-                </select>
-                <p [hidden]="modelo == '0'">Has seleccionado la opción # {{ vermodelo }}</p>
+              <div class="dropdown">
+                <button class="btn"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"  >
+                  Modelo
+                </button>
+                <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" (click)="seleccionaModelo($event)" *ngFor="let option of options" [value]="option.value" role="option">
+                    {{ option.label }}
+                  </a>
+                </div>
+                <p [hidden]="modelo == '0'">Has seleccionado la opción # {{ modelo }} : {{ vermodelo }}</p>
+              </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md-3 col-sm-4">
             <div class="row">
               Año
             </div>
             <div class="row">
-                <select class="classic" [(ngModel)]="anno" (change)="capturaranno()">
-                    <option value="0">Selecciona una opción</option>
-                    <option *ngFor="let dato of datos">
-                      {{dato}}
-                    </option>
-                </select>
-                <p [hidden]="anno == '0'">Has seleccionado la opción # {{ veranno }}</p>
+              <div class="dropdown">
+                <button class="btn"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"  >
+                  Año
+                </button>
+                <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" (click)="seleccionaAnn($event)" *ngFor="let option of options" [value]="option.value" role="option">
+                    {{ option.label }}
+                  </a>
+                </div>
+                <p [hidden]="anno == '0'">Has seleccionado la opción # {{ anno }} : {{ veranno }}</p>
+              </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col-md-3 col-sm-4">
             <div class="row">
               Marca
             </div>
             <div class="row">
-                <select class="classic" [(ngModel)]="marca" (change)="capturarmarca()">
-                    <option value="0">Selecciona una opción</option>
-                    <option *ngFor="let dato of datos">
-                      {{dato}}
-                    </option>
-                </select>
-                <p [hidden]="marca == '0'">Has seleccionado la opción # {{ vermarca }}</p>
+              <div class="dropdown">
+                <button class="btn"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"  >
+                  Marca
+                </button>
+                <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" (click)="seleccionaMarca($event)" *ngFor="let option of options" [value]="option.value" role="option">
+                    {{ option.label }}
+                  </a>
+                </div>
+                <p [hidden]="marca == '0'">Has seleccionado la opción # {{marca}} : {{ vermarca }}</p>
+              </div>  
             </div>
           </div>
-          <div class="col">
+          <div class="col-md-3 col-sm-4">
             <div class="row">
               Descripción
             </div>
             <div class="row">
-                <select class="classic" [(ngModel)]="descripcion" (change)="capturardescripcion()">
-                    <option value="0">Selecciona una opción</option>
-                    <option *ngFor="let dato of datos">
-                      {{dato}}
-                    </option>
-                </select>
-                <p [hidden]="descripcion == '0'">Has seleccionado la opción # {{ verdescripcion }}</p>
+              <div class="dropdown">
+                <button class="btn"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"  >
+                  Descripción
+                </button>
+                <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" (click)="seleccionaDescip($event)" *ngFor="let option of options" [value]="option.value" role="option">
+                    {{ option.label }}
+                  </a>
+                </div>
+                <p [hidden]="descripcion == '0'">Has seleccionado la opción # {{descripcion}} : {{ verdescripcion }}</p>
+              </div>
             </div>
           </div>
       </div>
     </div>
 </div>
+
 </div>

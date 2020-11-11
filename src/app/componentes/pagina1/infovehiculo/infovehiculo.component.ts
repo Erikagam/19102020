@@ -1,4 +1,6 @@
+import { analyzeFile } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+//  para añadir script import * as $ from 'jquery'; 
 
 @Component({
   selector: 'app-infovehiculo',
@@ -6,36 +8,44 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./infovehiculo.component.css']
 })
 export class InfovehiculoComponent implements OnInit {
-  datos;
+  options: { value: string; label: string; }[];
   constructor(){
-  
   } 
-
   modelo: string  = '0'; // Iniciamos
   vermodelo: string        = '';
-  capturarmodelo() {
-    this.vermodelo = this.modelo;
+  seleccionaModelo(evento){
+    console.log(evento.target.textContent)
+    this.modelo=evento.target.value
+    this.vermodelo=evento.target.textContent
   }
-
   anno: string  = '0'; // Iniciamos
   veranno: string        = '';
-  capturaranno() {
-    this.veranno = this.anno;
+  seleccionaAnn(evento){
+    console.log(evento.target.textContent)
+    this.anno=evento.target.value
+    this.veranno=evento.target.textContent
   }
-
   marca: string  = '0'; // Iniciamos
   vermarca: string        = '';
-  capturarmarca() {
-    this.vermarca = this.marca;
+  seleccionaMarca(evento){
+    console.log(evento.target.textContent)
+    this.marca=evento.target.value
+    this.vermarca=evento.target.textContent
   }
-
   descripcion: string  = '0'; // Iniciamos
-  verdescripcion: string        = '';
-  capturardescripcion() {
-    this.verdescripcion = this.descripcion;
+  verdescripcion: string       = '';
+  seleccionaDescip(evento){
+    console.log(evento.target.textContent)
+    this.descripcion=evento.target.value
+    this.verdescripcion=evento.target.textContent
   }
   ngOnInit(): void {
-    this.datos = [1,2,3,4,5,6,7,8,9,10];
+     this.options = [
+      { value: '1', label: 'Option 1' },
+      { value: '2', label: 'Option 2' },
+      { value: '3', label: 'Option 3' },
+    ];
+    
   }
 
   
