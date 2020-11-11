@@ -20,8 +20,12 @@ export class InfoaseguradoComponent implements OnInit {
   mes: string  = ''; // Iniciamos mes 
   vermes: string        = '';
   capturarmes(evento) {
+    this.dias=[]
+    this.verdia=""
+    this.dia=""
     // console.log(evento.target.textContent)
     this.vermes=evento.target.textContent
+    this.vermes=this.vermes.replace(/ /g,"")
     this.mes=evento.target.value
     this.calculabis()
   }
@@ -30,7 +34,11 @@ export class InfoaseguradoComponent implements OnInit {
   verfechaann: string        = '';
   capturarfechaann(evento) {
     // console.log(evento.target.textContent)
+    this.dias=[]
+    this.verdia=""
+    this.dia=""
     this.verfechaann=evento.target.textContent
+    this.verfechaann=this.verfechaann.replace(/ /g,"")
     this.fechaann=evento.target.value
     this.calculabis()
     }
@@ -41,7 +49,9 @@ export class InfoaseguradoComponent implements OnInit {
 // console.log(this.mesdiabis[0][0])//MESES
   verdia: string        = '';
   capturardia(evento) {
-    
+    this.verdia=evento.target.textContent
+    this.verdia=this.verdia.replace(/ /g,"")
+    this.dia=evento.target.value
   }
   
 
