@@ -7,24 +7,37 @@ import { NgModule } from "@angular/core";
   styleUrls: ['./pagina2.component.css']
 })
 export class Pagina2Component implements OnInit {
-  ampliaplus=true;
-  amplia=true;
-  limitada:boolean;
-  basica:boolean;
+  ampliaplus=false;
+  amplia=false;
+  limitada=false;
+  basica=false;
   statusAP = "NoSelected";
   statusA= "NoSelected";
-
-  Ampliaplus(  ) {
+  statusL= "NoSelected";
+  statusB= "NoSelected";
+  Ampliaplus( ) {
     // tiene selected this.statusAP
     this. ampliaplus = !this. ampliaplus;
-    this.statusAP = this. ampliaplus ? "NoSelected" : "Selected";
+    this.statusAP = this. ampliaplus ? "Selected"  :"NoSelected";
     console.log("Amplia Plus:"+' '+this.ampliaplus+' '+this.statusAP)
   }
-  Amplia(  ) {
-    // tiene selected this.statusAP
+  Amplia( ) {
+    // tiene selected this.statusA
     this. amplia = !this. amplia;
-    this.statusA= this. amplia ? "NoSelected" : "Selected";
+    this.statusA= this. amplia ? "Selected" : "NoSelected";
     console.log("Amplia :"+' '+this.amplia+' '+this.statusA)
+  }
+  Limitada( ) {
+    // tiene selected this.statusL
+    this. limitada = !this. limitada;
+    this.statusL= this. limitada ? "Selected" : "NoSelected" ;
+    console.log("Limitada :"+' '+this.limitada+' '+this.statusL)
+  }
+  Basica( ) {
+    // tiene selected this.statusB
+    this. basica = !this. basica;
+    this.statusB= this. basica  ? "Selected" : "NoSelected" ;
+    console.log("Básica :"+' '+this.basica+' '+this.statusB)
   }
 
   constructor() { }

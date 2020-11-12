@@ -14,8 +14,6 @@
   border-bottom-right-radius: calc(2.25rem - 1px) !important;
   border-bottom-left-radius: calc(2.25rem - 1px) !important;
 }
-
-
 .poliza,.pago,.descuento{
     height: 200px;
     width: 95px;
@@ -32,7 +30,7 @@
     margin-top: 30px;
     margin-bottom: 30px;
     /* background-color:#ebebeb !important; */
-    background-color:#ff0505 !important;
+    background-color:#ebebeb !important;
     border-radius: 50px !important;
   }
   .Select{
@@ -55,6 +53,20 @@
     fill: #c5c5c4
   }
   .Selecta #a{
+    fill: white;
+  }
+
+  .Noselectl #l{
+    fill: #c5c5c4
+  }
+  .Selectl #l{
+    fill: white;
+  }
+
+  .Noselectb #b{
+    fill: #c5c5c4
+  }
+  .Selectb #b{
     fill: white;
   }
   
