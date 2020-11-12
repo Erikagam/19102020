@@ -4,6 +4,8 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
+  font-family: 'Exo 2', sans-serif;
+  font: 400;
 }
  #estesi >.card-header:first-child{
   border-radius: calc(2.25rem - 1px) calc(2.25rem - 1px) 0 0 !important;
@@ -15,6 +17,8 @@
   border-bottom-left-radius: calc(2.25rem - 1px) !important;
 }
 .poliza,.pago,.descuento{
+    font-family: 'Exo 2', sans-serif;
+    font: 600;
     height: 200px;
     width: 95px;
     margin-top: 30px;
@@ -43,30 +47,50 @@
       border-radius: 40px;
       color: white !important;
   }
-  .Noselectap #ap{
+  .Noselectap {
     fill: #c5c5c4
   }
-  .Selectap #ap{
+  .Selectap {
     fill: white;
   }
-  .Noselecta #a{
-    fill: #c5c5c4
-  }
-  .Selecta #a{
-    fill: white;
+  #mejop{
+    font-family: 'Exo 2', sans-serif;
+    font: 800;
+    font-weight: bolder;
+    font-size: 30px;
+    color: white;
   }
 
-  .Noselectl #l{
-    fill: #c5c5c4
+  #letrasgrad{
+    font-family: 'Montserrat', sans-serif;
+       background: -webkit-linear-gradient(1.25turn, #FF8F48,#FF6963);
+       font: 800;
+       font-weight: 600;
+       font-size: 20px;
+       border-style: none;
+       border-radius: 40px;
+       -webkit-background-clip: text;
+       background-clip: text;
+       -webkit-text-fill-color: transparent;
   }
-  .Selectl #l{
-    fill: white;
+  #oferta{
+    font-family: 'Exo 2', sans-serif;
+    font: 500;
+    font-weight: bold;
+    font-size: 20px;
   }
 
-  .Noselectb #b{
-    fill: #c5c5c4
+  #fivth{
+    font-family: 'Exo 2', sans-serif;
+    font: 500;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff6666;
   }
-  .Selectb #b{
-    fill: white;
+  #btnconaho{
+    background: -webkit-linear-gradient(right,#FF8F48,#FF6963);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
   }
-  

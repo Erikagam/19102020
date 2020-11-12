@@ -40,31 +40,63 @@ export class Pagina2Component implements OnInit {
     console.log("Básica :"+' '+this.basica+' '+this.statusB)
   }
 
-//   descALTO=false;
-//   descMEDIO=false;
-//   descBAJO=false;
-//   statusDA = "NoSelected";
-//   statusDM= "NoSelected";
-//   statusDB= "NoSelected";
-//   Descuentoalto( ) {
-//     // tiene selected this.statusDA
-//     this. descALTO = !this. descALTO;
-//     this.statusDA = this. descALTO ? "Selected"  :"NoSelected";
-//     console.log("Descuento Alto:"+' '+this.descALTO+' '+this.statusDA)
-//   }
-//  Descuentomedio( ) {
-//     // tiene selected this.statusDM
-//     this. descMEDIO = !this. descMEDIO;
-//     this.statusDM= this. descMEDIO ? "Selected" : "NoSelected";
-//     console.log("Descuento Medio :"+' '+this.descMEDIO+' '+this.statusDM)
-//   }
-//   Descuentobajo( ) {
-//     // tiene selected this.statusDB
-//     this. descBAJO = !this. descBAJO;
-//     this.statusDB= this. descBAJO ? "Selected" : "NoSelected" ;
-//     console.log("Descuento Bajo :"+' '+this.descBAJO+' '+this.statusDB)
-//   }
-
+  descALTO=false;
+  descMEDIO=false;
+  descBAJO=false;
+  statusDA = "NoSelected";
+  statusDM= "NoSelected";
+  statusDB= "NoSelected";
+  Descuentoalto( ) {
+    // tiene selected this.statusDA
+    this. descALTO = !this. descALTO;
+    this.statusDA = this. descALTO ? "Selected"  :"NoSelected";
+    console.log("Descuento Alto:"+' '+this.descALTO+' '+this.statusDA)
+  }
+ Descuentomedio( ) {
+    // tiene selected this.statusDM
+    this. descMEDIO = !this. descMEDIO;
+    this.statusDM= this. descMEDIO ? "Selected" : "NoSelected";
+    console.log("Descuento Medio :"+' '+this.descMEDIO+' '+this.statusDM)
+  }
+  Descuentobajo( ) {
+    // tiene selected this.statusDB
+    this. descBAJO = !this. descBAJO;
+    this.statusDB= this. descBAJO ? "Selected" : "NoSelected" ;
+    console.log("Descuento Bajo :"+' '+this.descBAJO+' '+this.statusDB)
+  }
+  
+  mensual=false;
+  trimestral=false;
+  semestral=false;
+  anual=false;
+  statusM = "NoSelected";
+  statusT= "NoSelected";
+  statusS= "NoSelected";
+  statusAn= "NoSelected";
+  Mensual( ) {
+    // tiene selected this.statusM
+    this. mensual = !this. mensual;
+    this.statusM = this. mensual ? "Selected"  :"NoSelected";
+    console.log("Mensual:"+' '+this.mensual+' '+this.statusM)
+  }
+  Trimestral( ) {
+    // tiene selected this.statusT
+    this. trimestral = !this. trimestral;
+    this.statusT= this. trimestral ? "Selected" : "NoSelected";
+    console.log("Trimestral :"+' '+this.trimestral+' '+this.statusT)
+  }
+  Semestral( ) {
+    // tiene selected this.statusS
+    this. semestral = !this. semestral;
+    this.statusS= this. semestral ? "Selected" : "NoSelected" ;
+    console.log("Semestral :"+' '+this.semestral+' '+this.statusS)
+  }
+  Anual( ) {
+    // tiene selected this.statusAn
+    this. anual = !this. anual;
+    this.statusAn= this. anual  ? "Selected" : "NoSelected" ;
+    console.log("Anual :"+' '+this.anual+' '+this.statusAn)
+  }
 
   constructor() { }
 
