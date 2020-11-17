@@ -98,6 +98,9 @@ export class Pagina2Component implements OnInit {
     console.log("Anual :"+' '+this.anual+' '+this.statusAn)
   }
 
+
+
+ 
   constructor() { }
 
   ngOnInit(): void {
