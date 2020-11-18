@@ -1,6 +1,6 @@
 <div class="container my-5 mx-0 mw-100">
     <div class="row">
-        <div class="col-4">
+        <div class="col-md-4 col-sm-12">
             <div class="row">
               <div class="col col-sm-3">
                   <button [disabled]="this.amplia || this.limitada || this.basica" (click)="Ampliaplus()" class="btn poliza" [ngClass]="{'Noselect' : !ampliaplus, 'Select': ampliaplus}">
@@ -48,7 +48,7 @@
               </div>
             </div>
         </div>
-        <div class="col-4 ">
+        <div class="col-md-4 col-sm-12 ">
            <div class="row">
             <div class="col col-sm-4">
                 <button class="btn descuento" style="display: block;" [disabled]="this.descMEDIO || this.descBAJO " (click)=" Descuentoalto()" [ngClass]="{'Noselect' :  !descALTO, 'Select': descALTO}">
@@ -76,7 +76,7 @@
              </div>
            </div>
           </div>
-          <div class="col-4">
+          <div class="col-md-4 col-sm-12">
               <div class="row">
                 <div class="col col-sm-3">
                     <button class="btn pago" style="display: block;" [disabled]="this.trimestral || this.semestral  || this.anual" (click)=" Mensual()" [ngClass]="{'Noselect' :  !mensual, 'Select': mensual}">
@@ -216,7 +216,7 @@
                     <div class="row">
                         <div class="slidecontainer">
                             <p id="oferta">Robo total</p>
-                            <input type="range"  min="0" max="100" value="0"  step="10" class="slider" id="RangeRT" >
+                            <input type="range"  min="0" max="100" value="0"  step="10" class="slider" id="RangeRT" (change)="RT($event)">
                         </div>
                     </div>
                     <div class="row">
@@ -246,10 +246,11 @@
                     </div>
     
                     <div class="row">
-                        <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                            <label class="custom-control-label" for="customSwitch1">Auto sustituto</label>
-                          </div>
+                        <span class="mx-2">Auto sustituto</span>
+                        <div class="custom-control custom-switch ">
+                            <input type="checkbox" class="custom-control-input " id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1"></label>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="custom-control custom-switch">

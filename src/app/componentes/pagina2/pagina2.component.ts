@@ -98,7 +98,9 @@ export class Pagina2Component implements OnInit {
     console.log("Anual :"+' '+this.anual+' '+this.statusAn)
   }
 
-
+  RT(event){
+    console.log(event.target.valueAsNumber)
+  }
 
  
   constructor() { }
