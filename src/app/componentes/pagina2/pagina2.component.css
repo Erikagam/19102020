@@ -1,3 +1,7 @@
+.spaaro{
+  display: flex;
+  justify-content:space-around
+}
 #estesi{
   border-radius: 2.25rem !important;
   margin-top: 20px;

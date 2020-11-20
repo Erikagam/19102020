@@ -1,6 +1,6 @@
 <div class="container my-5 mx-0 mw-100">
     <div class="row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 spaaro" >
             <div class="row">
               <div class="col col-sm-3">
                   <button [disabled]="this.amplia || this.limitada || this.basica" (click)="Ampliaplus()" class="btn poliza" [ngClass]="{'Noselect' : !ampliaplus, 'Select': ampliaplus}">
@@ -48,7 +48,7 @@
               </div>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12 ">
+        <div class="col-md-4 col-sm-12 spaaro">
            <div class="row">
             <div class="col col-sm-4">
                 <button class="btn descuento" style="display: block;" [disabled]="this.descMEDIO || this.descBAJO " (click)=" Descuentoalto()" [ngClass]="{'Noselect' :  !descALTO, 'Select': descALTO}">
@@ -76,7 +76,7 @@
              </div>
            </div>
           </div>
-          <div class="col-md-4 col-sm-12">
+          <div class="col-md-4 col-sm-12 spaaro">
               <div class="row">
                 <div class="col col-sm-3">
                     <button class="btn pago" style="display: block;" [disabled]="this.trimestral || this.semestral  || this.anual" (click)=" Mensual()" [ngClass]="{'Noselect' :  !mensual, 'Select': mensual}">
@@ -210,7 +210,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12"     >
             <div class="card" id="estesi">
                 <div class="card-body">
                     <div class="row">
@@ -222,26 +222,26 @@
                     <div class="row">
                         <div class="slidecontainer">
                             <p id="oferta">Responsabilidad Civil Catastrófica</p>
-                            <input type="range"min="0" max="100" value="0"  step="10" class="slider" id="RangeRCC">
+                            <input type="range"min="0" max="100" value="0"  step="10" class="slider" id="RangeRCC" (change)="RCC($event)">
                         </div>
                     </div>
                     <div class="row">
                         <div class="slidecontainer">
                             <p id="oferta">Responsabilidad Civil Bienes y Personas</p>
-                            <input type="range" min="0" max="100" value="0"  step="10" class="slider" id="RangeRCBP">
+                            <input type="range" min="0" max="100" value="0"  step="10" class="slider" id="RangeRCBP" (change)="RCBP($event)">
                         </div>
                     </div>
                     <div class="row">
                         <div class="slidecontainer">
                             <p id="oferta">Gastos Médicos Ocupantes</p>
-                            <input type="range" min="0" max="100" value="0"  step="10" class="slider" id="RangeGMO">
+                            <input type="range" min="0" max="100" value="0"  step="10" class="slider" id="RangeGMO" (change)="GMO($event)">
                         </div>
                     </div>
                    
                     <div class="row">
                         <div class="slidecontainer">
                             <p id="oferta">Muerte accidental del conductor </p>
-                            <input type="range" min="0" max="100" value="0"  step="10" class="slider" id="RangeMAC">
+                            <input type="range" min="0" max="100" value="0"  step="10" class="slider" id="RangeMAC" (change)="MAC($event)">
                         </div>
                     </div>
     
@@ -253,27 +253,31 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="custom-control custom-switch">
+                        <span class="mx-2">Desbielamiento</span>
+                        <div class="custom-control custom-switch ">
                             <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                            <label class="custom-control-label" for="customSwitch2">Desbielamiento</label>
+                            <label class="custom-control-label" for="customSwitch2"></label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="custom-control custom-switch">
+                        <span class="mx-2">Extensión de R.C</span>
+                        <div class="custom-control custom-switch ">
                             <input type="checkbox" class="custom-control-input" id="customSwitch3">
-                            <label class="custom-control-label" for="customSwitch3">Extensión de R.C</label>
+                            <label class="custom-control-label" for="customSwitch3"></label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="custom-control custom-switch">
+                        <span class="mx-2">R.C Extranjero</span>
+                        <div class="custom-control custom-switch ">
                             <input type="checkbox" class="custom-control-input" id="customSwitch4">
-                            <label class="custom-control-label" for="customSwitch4">R.C Extranjero</label>
+                            <label class="custom-control-label" for="customSwitch4"></label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="custom-control custom-switch">
+                        <span class="mx-2">R.C Ocupantes</span>
+                        <div class="custom-control custom-switch ">
                             <input type="checkbox" class="custom-control-input" id="customSwitch5">
-                            <label class="custom-control-label" for="customSwitch5">R.C Ocupantes</label>
+                            <label class="custom-control-label" for="customSwitch5"></label>
                         </div>
                     </div>
                 </div>

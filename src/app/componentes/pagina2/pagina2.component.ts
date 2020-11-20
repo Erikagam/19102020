@@ -97,12 +97,31 @@ export class Pagina2Component implements OnInit {
     this.statusAn= this. anual  ? "Selected" : "NoSelected" ;
     console.log("Anual :"+' '+this.anual+' '+this.statusAn)
   }
-
+  roto:number
   RT(event){
-    console.log(event.target.valueAsNumber)
+    this.roto=event.target.valueAsNumber
+    console.log( 'Robo total:'+' '+this.roto)
   }
-
- 
+  recica:number
+  RCC(event){
+    this.recica=event.target.valueAsNumber
+    console.log('Responsabilidad civil catastrófica:'+' '+this.recica)
+  }
+ recibipe:number
+ RCBP(event){
+  this.recibipe=event.target.valueAsNumber
+  console.log( 'Responsabilidad civil bienes y personas:' +' '+this.recibipe)
+ }
+ gemeoc:number
+ GMO(event){
+  this.gemeoc=event.target.valueAsNumber
+  console.log( 'Gastos médicos ocupantes:' +' '+this.gemeoc)
+ }
+muacco:number
+ MAC(event){
+  this.muacco=event.target.valueAsNumber
+  console.log( 'Muerte accidental conductor:' +' '+this.muacco)
+ }
   constructor() { }
 
   ngOnInit(): void {
