@@ -27,3 +27,8 @@
 #gmm{
     display: inline-flex;
 }
+.card-img-overlay > .card-text{
+    font-family: 'Montserrat', sans-serif;
+    font: 700;
+    font-weight: bold;
+}
