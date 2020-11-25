@@ -7,6 +7,7 @@ import { NgModule } from "@angular/core";
   styleUrls: ['./pagina2.component.css']
 })
 export class Pagina2Component implements OnInit {
+  //Valores botón tipo de cobertura
   ampliaplus=false;
   amplia=false;
   limitada=false;
@@ -39,7 +40,7 @@ export class Pagina2Component implements OnInit {
     this.statusB= this. basica  ? "Selected" : "NoSelected" ;
     console.log("Básica :"+' '+this.basica+' '+this.statusB)
   }
-
+  //Valores botón descuento
   descALTO=false;
   descMEDIO=false;
   descBAJO=false;
@@ -64,7 +65,7 @@ export class Pagina2Component implements OnInit {
     this.statusDB= this. descBAJO ? "Selected" : "NoSelected" ;
     console.log("Descuento Bajo :"+' '+this.descBAJO+' '+this.statusDB)
   }
-  
+  //Valores del botones tipo de pago
   mensual=false;
   trimestral=false;
   semestral=false;
@@ -121,6 +122,32 @@ muacco:number
  MAC(event){
   this.muacco=event.target.valueAsNumber
   console.log( 'Muerte accidental conductor:' +' '+this.muacco)
+ }
+ //Valores del switch
+ as:boolean
+ des:boolean
+ erc:boolean
+ rcext:boolean
+ rcocu:boolean
+ AuSus(event){
+  this.as=event.target.checked
+  console.log('Auto Sustituto:'+' '+this.as)
+ }
+ Desb(event){
+  this.des=event.target.checked
+  console.log('Desbielamiento:'+' '+this.des)
+ }
+ ExRC(event){
+  this.erc=event.target.checked
+  console.log('Extensión del R.C:'+' '+this.erc)
+ }
+ RCExt(event){
+  this.rcext=event.target.checked
+  console.log('R.C de extranjeros:'+' '+this.rcext)
+ }
+ RCOcu(event){
+  this.rcocu=event.target.checked
+  console.log('R.C de ocupantes:'+' '+this.rcocu)
  }
   constructor() { }
 
