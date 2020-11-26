@@ -20,15 +20,18 @@
   border-bottom-right-radius: calc(2.25rem - 1px) !important;
   border-bottom-left-radius: calc(2.25rem - 1px) !important;
 }
+#ampl{
+  letter-spacing: -0.106em;
+}
 .poliza,.pago,.descuento{
     font-family: 'Exo 2', sans-serif;
     font: 600;
     height: 200px;
     width: 95px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
     background-color:#ebebeb !important;
-    border-radius: 50px !important;
+    border-radius: 30px !important;
     color: #000000 !important;
     /* display: ruby-base-container !important; */
   }
@@ -39,7 +42,7 @@
     margin-bottom: 30px;
     /* background-color:#ebebeb !important; */
     background-color:#ebebeb !important;
-    border-radius: 50px !important;
+    border-radius: 30px !important;
   }
   .Select{
     height: 200px;
@@ -47,15 +50,21 @@
     margin-top: 30px;
     margin-bottom: 30px;
     background: -webkit-linear-gradient(#FF8F48,#FF6963);
-      border-style: none;
-      border-radius: 40px;
+      border-radius: 30px;
       color: white !important;
+    
   }
   .Noselectap {
     fill: #c5c5c4
   }
   .Selectap {
     fill: white;
+  }
+  .Noselectapll{
+    fill: #d8d8d8
+  }
+  .Selectapll{
+    fill: #ebebeb;
   }
   #mejop{
     font-family: 'Exo 2', sans-serif;
