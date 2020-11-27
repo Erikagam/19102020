@@ -24,6 +24,9 @@
   letter-spacing: -0.106em;
 }
 .poliza,.pago,.descuento{
+  /* Agregaste esto jueves */
+    padding-top: 1.375rem;
+    padding-bottom: 22px;
     font-family: 'Exo 2', sans-serif;
     font: 600;
     height: 200px;

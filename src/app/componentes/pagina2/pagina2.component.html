@@ -3,68 +3,140 @@
         <div class="col-md-4 col-sm-12 spaaro" >
             <div class="row">
               <div class="col col-sm-3">
-                  <button id="ampl" [disabled]="this.amplia || this.limitada || this.basica" (click)="Ampliaplus()" class="btn poliza" [ngClass]="{'Noselect' : !ampliaplus, 'Select': ampliaplus}">
-                    <label style="display: block; margin-left: auto; margin-right: auto;margin-bottom: -0.5rem ;" >
-                        <label style="display: block; margin-left: 36px; margin-bottom: 2.5rem;">
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24"  style="margin-left: 6px;margin-top: 16px;" ><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 14px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 5px; margin-top: 10px; position: relative;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"   style="margin-left: 16px; margin-top: -27px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-top: -43px; margin-left: 2px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                    <button id="ampl" [disabled]="this.amplia || this.limitada || this.basica" (click)="Ampliaplus()" class="btn poliza" [ngClass]="{'Noselect' : !ampliaplus, 'Select': ampliaplus}">
+                        <label style="display: flex; position: absolute; left: 32.917px; top: 77.467px;">                           
+                            <label id="izquierda" style="display: grid;">
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" style="margin-left: 16px;margin-top: 6px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: 5px;margin-top: -2px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -2px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-left: -14px;"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 4px;margin-top: -7px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            </label>
+                            <label id="aladoder" style="display: grid;margin-top: 15px;margin-left: 14px;">
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
+                            </label>
+                            <label id="derecha" style="display: grid;">
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" style="margin-left: -22px;margin-top: 6px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-top: 3px;margin-left: -7px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -5px;margin-top: 4px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -14px;margin-top: 3px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -21px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            </label>
                         </label>
-                        <label style="display: grid; margin-top: -113px;margin-bottom: -0.5rem;">
-                            <!-- <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg> -->
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 9px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 23px;margin-top: -11px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 16px;margin-top: 8px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-top: 0px;margin-left: 2px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                        <label style="display: flex; margin-top: -143px; margin-bottom: 2.5rem;">
+                            <label id="renglon1"  style="position: absolute;top: 52.467px;left: 57.917px;">
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            </label>
+                            <label id="renglon2">
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"  style="position: absolute;top: 72px;"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6"   viewBox="0 0 24 24"  style="position: absolute;top: 92px;left: 43.917px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;left: 49.917px;top: 95px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;left: 57.917px;top: 100px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;top: 94px;left: 64.917px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                                <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;left: 77.917px;top: 70px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            </label>
                         </label>
-                        <label style="display: grid;">
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-top: -40px; margin-left: 21px;"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 35px; margin-top: -24px; position: relative;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
-                            <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 43px; margin-top: -14px; position: relative;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
-                        </label>
-                        <svg  [ngClass]="{'Noselectap' : !ampliaplus, 'Selectap':ampliaplus }" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" width="90" height="50" viewBox="0 0 24 24" style="margin-top: -57px; margin-left: -1px; position: inherit;"><path d="M13 3.056v-1.056c0-.552-.448-1-1-1s-1 .448-1 1v1.052c-6.916.522-10.372 5.594-11 9.906 1.864-2.677 6.136-2.677 8 0 1.839-2.641 6.047-2.685 7.917 0 1.864-2.677 6.219-2.677 8.083 0-.625-4.291-4.125-9.333-11-9.902zm0 10.101v6.843c0 1.657-1.343 3-3 3s-3-1.343-3-3v-1h2v1c0 .551.449 1 1 1s1-.449 1-1v-6.866c.68-.226 1.27-.242 2 .023z"/></svg>
-                    </label> 
-                    Amplia Plus
+                        <svg  [ngClass]="{'Noselectap' : !ampliaplus, 'Selectap':ampliaplus }" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" width="90" height="50" viewBox="0 0 24 24" style="margin-top: 82px;margin-left: -11px;"><path d="M13 3.056v-1.056c0-.552-.448-1-1-1s-1 .448-1 1v1.052c-6.916.522-10.372 5.594-11 9.906 1.864-2.677 6.136-2.677 8 0 1.839-2.641 6.047-2.685 7.917 0 1.864-2.677 6.219-2.677 8.083 0-.625-4.291-4.125-9.333-11-9.902zm0 10.101v6.843c0 1.657-1.343 3-3 3s-3-1.343-3-3v-1h2v1c0 .551.449 1 1 1s1-.449 1-1v-6.866c.68-.226 1.27-.242 2 .023z"/></svg>
+                       <label style="position: relative;top: 29px;">
+                            Amplia Plus
+                       </label>
                     </button>
               </div>
               <div class="col col-sm-3">
-                  <button [disabled]="this.ampliaplus || this.limitada || this.basica" class="btn poliza" (click)="Amplia()" [ngClass]="{'Noselect' : !amplia, 'Select': amplia }" >
-                    <!-- [ngClass]="{'Noselect' : amplia, 'Select': !amplia}" -->
-                    <label  style="display: block;">
-                        <label style="display: block;">
-                            <hr style="visibility: hidden;">
-                            <svg [ngClass]="{'Noselectap' : !amplia, 'Selectap':amplia }" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" width="90" height="50" viewBox="0 0 24 24"><path d="M13 3.056v-1.056c0-.552-.448-1-1-1s-1 .448-1 1v1.052c-6.916.522-10.372 5.594-11 9.906 1.864-2.677 6.136-2.677 8 0 1.839-2.641 6.047-2.685 7.917 0 1.864-2.677 6.219-2.677 8.083 0-.625-4.291-4.125-9.333-11-9.902zm0 10.101v6.843c0 1.657-1.343 3-3 3s-3-1.343-3-3v-1h2v1c0 .551.449 1 1 1s1-.449 1-1v-6.866c.68-.226 1.27-.242 2 .023z"/></svg>
-                        </label>  
+                <button [disabled]="this.ampliaplus || this.limitada || this.basica" class="btn poliza" (click)="Amplia()" [ngClass]="{'Noselect' : !amplia, 'Select': amplia }" >
+                    <label style="display: flex; position: absolute; left: 32.917px; top: 77.467px;">                           
+                        <label id="izquierda" style="display: grid;">
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" style="margin-left: 16px;margin-top: 6px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: 5px;margin-top: -2px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -2px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-left: -14px;visibility: hidden;"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 4px;margin-top: -7px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                        </label>
+                        <label id="aladoder" style="display: grid;margin-top: 15px;margin-left: 14px;">
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="visibility: hidden;"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
+                        </label>
+                        <label id="derecha" style="display: grid;">
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" style="margin-left: -22px;margin-top: 6px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-top: 3px;margin-left: -7px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -5px;margin-top: 4px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -14px;margin-top: 3px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -21px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                        </label>
                     </label>
-                      Amplia
-                  </button>
+                    <label style="display: flex; margin-top: -143px; margin-bottom: 2.5rem;">
+                        <label id="renglon1"  style="position: absolute;top: 63.467px;left: 57.917px;">
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                        </label>
+                        <label id="renglon2">
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"  style="position: absolute;top: 72px; visibility: hidden;"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6"   viewBox="0 0 24 24"  style="position: absolute; top: 112px; left: 30.917px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;left: 49.917px;top: 95px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;left: 57.917px;top: 100px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;top: 94px;left: 64.917px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;left: 77.917px;top: 86px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                        </label>
+                    </label>
+                    <svg [ngClass]="{'Noselectap' : !amplia, 'Selectap':amplia}" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" width="90" height="50" viewBox="0 0 24 24" style="margin-top: 82px;margin-left: -11px;"><path d="M13 3.056v-1.056c0-.552-.448-1-1-1s-1 .448-1 1v1.052c-6.916.522-10.372 5.594-11 9.906 1.864-2.677 6.136-2.677 8 0 1.839-2.641 6.047-2.685 7.917 0 1.864-2.677 6.219-2.677 8.083 0-.625-4.291-4.125-9.333-11-9.902zm0 10.101v6.843c0 1.657-1.343 3-3 3s-3-1.343-3-3v-1h2v1c0 .551.449 1 1 1s1-.449 1-1v-6.866c.68-.226 1.27-.242 2 .023z"/></svg>
+                   <label style="position: relative;top: 29px;">
+                        Amplia
+                   </label>
+                </button>
               </div>
               <div class="col col-sm-3">
                   <button [disabled]="this.amplia || this.ampliaplus || this.basica" class="btn poliza" (click)="Limitada()" [ngClass]="{'Noselect' : !limitada , 'Select': limitada }" >
-                    <!-- [ngClass]="{'Noselect' : limitada, 'Select': !limitada}" -->
-                    <label style="display: block;" >
-                        <label style="display: block;">
-                            <hr style="visibility: hidden;">
-                            <svg [ngClass]="{'Noselectap' : !limitada, 'Selectap': limitada}" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" width="90" height="50" viewBox="0 0 24 24"><path d="M13 3.056v-1.056c0-.552-.448-1-1-1s-1 .448-1 1v1.052c-6.916.522-10.372 5.594-11 9.906 1.864-2.677 6.136-2.677 8 0 1.839-2.641 6.047-2.685 7.917 0 1.864-2.677 6.219-2.677 8.083 0-.625-4.291-4.125-9.333-11-9.902zm0 10.101v6.843c0 1.657-1.343 3-3 3s-3-1.343-3-3v-1h2v1c0 .551.449 1 1 1s1-.449 1-1v-6.866c.68-.226 1.27-.242 2 .023z"/></svg>
-                        </label>  
-                    </label>  
-                    Limitada
-                  </button>
+                    <label style="display: flex; position: absolute; left: 32.917px; top: 77.467px;">                           
+                        <label id="izquierda" style="display: grid;">
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" style="margin-left: 16px;margin-top: 6px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: 5px;margin-top: -2px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -2px;visibility: hidden;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-left: -14px;visibility: hidden;"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"  style="margin-left: 4px;margin-top: -7px;visibility: hidden;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                        </label>
+                        <label id="aladoder" style="display: grid;margin-top: 15px;margin-left: 14px;">
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="visibility: hidden;"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
+                        </label>
+                        <label id="derecha" style="display: grid;">
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" style="margin-left: -22px;margin-top: 6px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-top: 3px;margin-left: -7px;visibility: hidden;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -5px;margin-top: 4px;visibility: hidden;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -14px;margin-top: 3px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="margin-left: -21px;visibility: hidden;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                        </label>
+                    </label>
+                    <label style="display: flex; margin-top: -143px; margin-bottom: 2.5rem;">
+                        <label id="renglon1"  style="position: absolute;top: 63.467px;left: 57.917px;visibility: hidden;">
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                        </label>
+                        <label id="renglon2">
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"  style="position: absolute;top: 72px; visibility: hidden;"><path d="M9.417 0h6.958l-3.375 8h7l-13 16 4.375-11h-7.375z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6"   viewBox="0 0 24 24"  style="position: absolute; top: 112px; left: 30.917px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;left: 49.917px;top: 95px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;left: 57.917px;top: 100px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;top: 94px;left: 64.917px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8"   viewBox="0 0 24 24"  style="position: absolute;left: 77.917px;top: 86px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
+                        </label>
+                    </label>
+                    <svg [ngClass]="{'Noselectap' : !limitada, 'Selectap':limitada}" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" width="90" height="50" viewBox="0 0 24 24" style="margin-top: 82px;margin-left: -11px;"><path d="M13 3.056v-1.056c0-.552-.448-1-1-1s-1 .448-1 1v1.052c-6.916.522-10.372 5.594-11 9.906 1.864-2.677 6.136-2.677 8 0 1.839-2.641 6.047-2.685 7.917 0 1.864-2.677 6.219-2.677 8.083 0-.625-4.291-4.125-9.333-11-9.902zm0 10.101v6.843c0 1.657-1.343 3-3 3s-3-1.343-3-3v-1h2v1c0 .551.449 1 1 1s1-.449 1-1v-6.866c.68-.226 1.27-.242 2 .023z"/></svg>
+                   <label style="position: relative;top: 29px;">
+                        Limitada
+                   </label>
+                </button>
               </div>
               <div class="col col-sm-3">
                   <button [disabled]="this.amplia || this.limitada || this.ampliaplus" class="btn poliza" (click)="Basica()" [ngClass]="{'Noselect' : !basica, 'Select': basica }"  >
                     <!--  -->
                     <!-- [ngClass]="{'Noselect' : basica, 'Select': !basica}" -->
                     <label>
-                        <label style="display: block;">
-                            <hr style="visibility: hidden;">
+                        <label style="display:inline-flex;">
+                            <svg [ngClass]="{'Noselectapll' : !basica, 'Selectapll':basica }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="position: absolute;left: 54.917px;top: 86px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
                             <svg [ngClass]="{'Noselectap' : !basica, 'Selectap': basica}" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" width="90" height="50" viewBox="0 0 24 24"><path d="M13 2.056v-1.056c0-.552-.447-1-1-1s-1 .448-1 1v1.052l-6 13.906 3-2.008 2 2.008 2-1.997 2 1.997 2-2.008 3 2.008-6-13.902zm0 15.101v3.843c0 1.657-1.344 3-3 3s-3-1.343-3-3v-1h2v1c0 .551.449 1 1 1s1-.449 1-1v-3.866c.68-.226 1.27-.242 2 .023z"/></svg>
+                            <svg [ngClass]="{'Noselectapll' : !basica, 'Selectapll':basica }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" style="position: relative; left: -36px; top: 13px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
                         </label>  
-                    </label>  
-                    Básica</button>
+                    </label>
+                    <label style="position: relative;top: 16px;">
+                        Básica
+                   </label>  
+                </button>
               </div>
             </div>
         </div>
@@ -386,3 +458,5 @@
 
 </div>
     
+
+
