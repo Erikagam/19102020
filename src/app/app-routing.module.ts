@@ -20,7 +20,7 @@ const routes: Routes = [
         component: Pagina1Component,
       },
       {
-        path: 'compara',
+        path: 'compara/:modelo/:marca/:anno/:descripcion',
         component: Pagina2Component,
       },
     ],
