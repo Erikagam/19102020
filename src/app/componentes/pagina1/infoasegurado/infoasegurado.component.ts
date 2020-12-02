@@ -8,6 +8,7 @@ import { disableDebugTools } from '@angular/platform-browser';
   styleUrls: ['./infoasegurado.component.css']
 })
 export class InfoaseguradoComponent implements OnInit {
+  
   bisiesto: boolean;
   dias;
   meses;

@@ -12,12 +12,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/selecciona',
-        pathMatch: 'full',
-      },
-      {
-        path: 'selecciona',
-        component: Pagina1Component,
+        loadChildren: './componentes/pagina1/pagina1.module#Pagina1Module',
       },
       {
         path: 'compara',

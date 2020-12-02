@@ -1,5 +1,6 @@
 import { analyzeFile } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter,Output } from '@angular/core';
+
 //  para añadir script import * as $ from 'jquery'; 
 
 @Component({
@@ -9,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfovehiculoComponent implements OnInit {
   options: { value: string; label: string; }[];
+  @Output() datoscarrito= new EventEmitter<any>();
   constructor(){
   } 
   modelo: string  = '0'; // Iniciamos
@@ -39,6 +41,16 @@ export class InfovehiculoComponent implements OnInit {
     this.descripcion=evento.target.value
     this.verdescripcion=evento.target.textContent
   }
+  public emisor(){
+    let datos={}
+    return datos={
+      modelo: this.vermodelo,
+      marca: this.vermarca,
+      anno:this.veranno,
+      descripcion:this.verdescripcion
+    }
+  }
+
   ngOnInit(): void {
      this.options = [
       { value: '1', label: 'Option 1' },
