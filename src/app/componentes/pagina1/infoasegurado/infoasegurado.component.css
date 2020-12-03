@@ -19,7 +19,7 @@
     font: 300;
     font-size: 20px;
   }
-  #dropdownMenuButton{
+  .nacimiento {
     background-color: white;
     border: solid black;
     -webkit-border-radius: 20px;
@@ -36,7 +36,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
   }
-#dropdownMenuButton{
+.nacimiento{
     background-image:
       linear-gradient(45deg, transparent 50%, white 50%),
       linear-gradient(135deg, white 50%, transparent 50%),
