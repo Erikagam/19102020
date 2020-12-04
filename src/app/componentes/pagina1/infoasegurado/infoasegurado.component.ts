@@ -23,6 +23,7 @@ export class InfoaseguradoComponent implements OnInit {
     this.dias=[]
     this.verdia=""
     this.dia=""
+    document.getElementById("btndia").textContent = "Día";
     // console.log(evento.target.textContent)
     this.vermes=evento.target.textContent
     this.vermes=this.vermes.replace(/ /g,"")
@@ -39,11 +40,12 @@ export class InfoaseguradoComponent implements OnInit {
     this.dias=[]
     this.verdia=""
     this.dia=""
+    document.getElementById("btndia").textContent = "Día";
     this.verfechaann=evento.target.textContent
     this.verfechaann=this.verfechaann.replace(/ /g,"")
     this.fechaann=evento.target.value
-    this.calculabis()
     document.getElementById("btnnacann").textContent = this.verfechaann;
+    this.calculabis()
     }
   
 

@@ -237,13 +237,13 @@
                   <div class="row"><h5 id="oferta">Mi auto es: </h5></div>
                   <div class="row"></div>
                   <div class="row"><h5 id="oferta">Año: </h5></div>
-                  <div class="row"></div>
+                  <div class="row">{{veranno}}</div>
                   <div class="row"><h5 id="oferta">Marca: </h5></div>
-                  <div class="row"></div>
+                  <div class="row">{{vermarca}} </div>
                   <div class="row"><h5 id="oferta">Modelo: </h5></div>
-                  <div class="row"></div>
+                  <div class="row">{{vermodelo}}</div>
                   <div class="row"><h5 id="oferta">Descripción: </h5></div>
-                  <div class="row"></div>
+                  <div class="row">{{verdescripcion}}</div>
                 </div>
               </div>
         </div>
@@ -307,32 +307,32 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="slidecontainer">
-                            <p id="oferta">Robo total</p>
+                            <p id="oferta">Robo total<label [hidden]="roto == 0"> {{this.roto}} %</label></p>
                             <input type="range"  min="0" max="100" value="0"  step="10" class="slider" id="RangeRT" (change)="RT($event)">
                         </div>
                     </div>
                     <div class="row">
                         <div class="slidecontainer">
-                            <p id="oferta">Responsabilidad Civil Catastrófica</p>
+                            <p id="oferta">Responsabilidad Civil Catastrófica <label [hidden]="recica == 0"> {{this.recica}} %</label></p>
                             <input type="range"min="0" max="100" value="0"  step="10" class="slider" id="RangeRCC" (change)="RCC($event)">
                         </div>
                     </div>
                     <div class="row">
                         <div class="slidecontainer">
-                            <p id="oferta">Responsabilidad Civil Bienes y Personas</p>
+                            <p id="oferta">Responsabilidad Civil Bienes y Personas <label [hidden]="recibipe == 0"> {{this.recibipe}} %</label></p>
                             <input type="range" min="0" max="100" value="0"  step="10" class="slider" id="RangeRCBP" (change)="RCBP($event)">
                         </div>
                     </div>
                     <div class="row">
                         <div class="slidecontainer">
-                            <p id="oferta">Gastos Médicos Ocupantes</p>
+                            <p id="oferta">Gastos Médicos Ocupantes <label [hidden]="gemeoc == 0"> {{this.gemeoc}} %</label></p>
                             <input type="range" min="0" max="100" value="0"  step="10" class="slider" id="RangeGMO" (change)="GMO($event)">
                         </div>
                     </div>
                    
                     <div class="row">
                         <div class="slidecontainer">
-                            <p id="oferta">Muerte accidental del conductor </p>
+                            <p id="oferta">Muerte accidental del conductor <label [hidden]="muacco == 0"> {{this.muacco}}  %</label></p>
                             <input type="range" min="0" max="100" value="0"  step="10" class="slider" id="RangeMAC" (change)="MAC($event)">
                         </div>
                     </div>

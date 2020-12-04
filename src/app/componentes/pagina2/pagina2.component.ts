@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from "@angular/core";
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-pagina2',
   templateUrl: './pagina2.component.html',
@@ -16,6 +16,10 @@ export class Pagina2Component implements OnInit {
   statusA= "NoSelected";
   statusL= "NoSelected";
   statusB= "NoSelected";
+  vermodelo: any;
+  vermarca: any;
+  verdescripcion: any;
+  veranno: any;
   Ampliaplus( ) {
     // tiene selected this.statusAP
     this. ampliaplus = !this. ampliaplus;
@@ -98,27 +102,27 @@ export class Pagina2Component implements OnInit {
     this.statusAn= this. anual  ? "Selected" : "NoSelected" ;
     console.log("Anual :"+' '+this.anual+' '+this.statusAn)
   }
-  roto:number
+  roto:number=0
   RT(event){
     this.roto=event.target.valueAsNumber
     console.log( 'Robo total:'+' '+this.roto)
   }
-  recica:number
+  recica:number=0
   RCC(event){
     this.recica=event.target.valueAsNumber
     console.log('Responsabilidad civil catastrófica:'+' '+this.recica)
   }
- recibipe:number
+ recibipe:number=0
  RCBP(event){
   this.recibipe=event.target.valueAsNumber
   console.log( 'Responsabilidad civil bienes y personas:' +' '+this.recibipe)
  }
- gemeoc:number
+ gemeoc:number=0
  GMO(event){
   this.gemeoc=event.target.valueAsNumber
   console.log( 'Gastos médicos ocupantes:' +' '+this.gemeoc)
  }
-muacco:number
+muacco:number=0
  MAC(event){
   this.muacco=event.target.valueAsNumber
   console.log( 'Muerte accidental conductor:' +' '+this.muacco)
@@ -149,9 +153,17 @@ muacco:number
   this.rcocu=event.target.checked
   console.log('R.C de ocupantes:'+' '+this.rcocu)
  }
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute 
+  ) { 
+   }
 
   ngOnInit(): void {
+    this.vermodelo=history.state.modelo
+    this.vermarca=history.state.marca
+    this.verdescripcion=history.state.descripcion
+    this.veranno=history.state.anno
+    
   }
 
 
