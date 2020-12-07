@@ -28,8 +28,8 @@ export class InfoaseguradoComponent implements OnInit {
     this.vermes=evento.target.textContent
     this.vermes=this.vermes.replace(/ /g,"")
     this.mes=evento.target.value
-    this.calculabis()
     document.getElementById("btnmes").textContent = this.vermes;
+    this.calculabis()
   }
   
   fechaann: string  = ''; // Iniciamos fechaann 
