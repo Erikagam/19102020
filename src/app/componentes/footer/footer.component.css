@@ -32,3 +32,22 @@
     font: 700;
     font-weight: bold;
 }
+@media (max-width: 576px) { 
+    .card{
+      flex: 0 0 25%;
+        max-width: 25%;
+        display: inline flow-root list-item;
+        font-size: 10px;
+    }
+    .card> img{
+        height: 107px;
+    }
+    .card-text> svg {
+        height: 29px;
+        width: 29px;
+    }
+    #foo{
+        margin-top: -16px !important;
+    }
+    
+   }

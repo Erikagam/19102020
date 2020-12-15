@@ -96,3 +96,11 @@
     font-size: 40px;
     font-weight: bold;
 }
+@media (max-width: 576px) {
+  button.btn.btn-primary.btn-lg#coti{
+        font-size: 20px!important;
+     }
+     #ahora{
+      font-size: 26px !important;
+     }
+ }
