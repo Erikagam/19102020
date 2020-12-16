@@ -34,11 +34,11 @@
                 <div class="row">
                   <div class="dropdown">
                     <button class="btn model"  type="button" id="btnmodelo" data-toggle="dropdown" aria-haspopup="true"  >
-                      Modelo:
+                      Modelo
                     </button>
                     <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" (click)="seleccionaModelo($event)" *ngFor="let option of options" [attr.data-modelo-id]="option.value" role="option">
-                        {{ option.label }}
+                      <a class="dropdown-item" (click)="seleccionaModelo($event)" *ngFor="let modelo of modelos" [attr.data-modelo-id]="modelo.value" role="option">
+                        {{ modelo.label }}
                       </a>
                     </div>
                   </div>

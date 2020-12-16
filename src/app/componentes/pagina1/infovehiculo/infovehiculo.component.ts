@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfovehiculoComponent implements OnInit {
   options: { value: string; label: string; }[];
+  modelos: { value: string; label: string; }[];
   constructor(){
   } 
   modelo: string  = '0'; // Iniciamos
@@ -49,7 +50,12 @@ export class InfovehiculoComponent implements OnInit {
       { value: '2', label: 'Option 2' },
       { value: '3', label: 'Option 3' },
     ];
-    
+    this.modelos= [
+      { value: '1', label: 'Particular' },
+      { value: '2', label: 'Motocicleta' },
+      { value: '3', label: 'Fronterizo' },
+      { value: '4', label: 'Camión' }
+    ];
   }
 
   
