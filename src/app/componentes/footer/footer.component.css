@@ -46,8 +46,8 @@
         height: 29px;
         width: 29px;
     }
-    #foo{
-        margin-top: -16px !important;
+    .card-img-overlay > .card-text{
+        font-size: 1vh;
     }
     #gmm1{
         margin-top: -36px!important;
@@ -72,5 +72,12 @@
         padding-top: 6px!important;
         padding-right: 4px!important;
         margin-top: -48px!important;
+    }
+    .footllama {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    a.mlef.mrig>svg{
+        height: 12px;
     }
    }
