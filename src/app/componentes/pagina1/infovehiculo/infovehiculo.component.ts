@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 //  para añadir script import * as $ from 'jquery'; 
-import {Response} from './interphaces/response'
 
 
 @Component({
@@ -19,6 +18,19 @@ export class InfovehiculoComponent implements OnInit {
   modelo: string  = '0'; // Iniciamos
   vermodelo: string        = '';
   seleccionaModelo(evento){
+    //siguientes 12 lineas limpian la seleccion anterior
+    this.annos=[]
+    this.marcas=[]
+    this.descripciones=[]
+    this.anno=""
+    this.veranno=""
+    document.getElementById("btnyear").textContent = "Año";
+    this.marca=""
+    this.vermarca=""
+    document.getElementById("btnmarca").textContent = "Marca";
+    this.descripcion=""
+    this.verdescripcion=""
+    document.getElementById("btndescr").textContent = "Descripción";
     console.log(evento.target.textContent+'   '+evento.target.attributes[3].value )
     this.modelo=evento.target.attributes[3].value
     this.vermodelo=evento.target.textContent
@@ -37,6 +49,15 @@ export class InfovehiculoComponent implements OnInit {
   anno: string  = '0'; // Iniciamos
   veranno: string        = '';
   seleccionaAnn(evento){
+        //siguientes 8 lineas limpian la seleccion anterior
+        this.marcas=[]
+        this.descripciones=[]
+        this.marca=""
+        this.vermarca=""
+        document.getElementById("btnmarca").textContent = "Marca";
+        this.descripcion=""
+        this.verdescripcion=""
+        document.getElementById("btndescr").textContent = "Descripción";
     console.log(evento.target.textContent + '  ' +evento.target.attributes[3].value)
     this.anno=evento.target.attributes[3].value
     this.veranno=evento.target.textContent
@@ -51,18 +72,19 @@ export class InfovehiculoComponent implements OnInit {
       console.log(data.catalogos)
       this.marcas=data.catalogos
       })
-
-
-
   }
   marca: string  = '0'; // Iniciamos
   vermarca: string        = '';
   seleccionaMarca(evento){
+    //siguientes 5 lineas limpian la seleccion anterior
+    this.descripciones=[]
+    this.descripcion=""
+    this.verdescripcion=""
+    document.getElementById("btndescr").textContent = "Descripción";
     console.log(evento.target.textContent+'  '+evento.target.attributes[3].value)
     this.marca=evento.target.attributes[3].value
     this.vermarca=evento.target.textContent
     document.getElementById("btnmarca").textContent = this.vermarca;
-
     this.http.post(this.api, {
       "iTipoCatalogo": "40",
       "iModelo": this.anno,
