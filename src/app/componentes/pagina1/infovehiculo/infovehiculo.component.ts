@@ -13,6 +13,8 @@ import {Response} from './interphaces/response'
 export class InfovehiculoComponent implements OnInit {
   annos: {sLlave: string; sDato: string; }[];
   modelos: { sLlave: number; sDato: string; }[];
+  marcas: { sLlave: number; sDato: string; }[];
+  descripciones: { sLlave: number; sDato: string; }[];
 
   modelo: string  = '0'; // Iniciamos
   vermodelo: string        = '';
@@ -30,8 +32,7 @@ export class InfovehiculoComponent implements OnInit {
         }).subscribe((data: any)=> {
           console.log(data.catalogos)
           this.annos=data.catalogos
-      
-            })
+        })
 }
   anno: string  = '0'; // Iniciamos
   veranno: string        = '';
@@ -42,14 +43,14 @@ export class InfovehiculoComponent implements OnInit {
     document.getElementById("btnyear").textContent = this.veranno;
     this.http.post(this.api, {
       "iTipoCatalogo": "30",
-      "iModelo": "00",
+      "iModelo": this.anno,
       "iMarca": "0",
-      "iSubramo": this.anno,
+      "iSubramo": this.modelo,
       "sDescripcion": ""
     }).subscribe((data: any)=> {
       console.log(data.catalogos)
-      
-        })
+      this.marcas=data.catalogos
+      })
 
 
 
@@ -57,16 +58,29 @@ export class InfovehiculoComponent implements OnInit {
   marca: string  = '0'; // Iniciamos
   vermarca: string        = '';
   seleccionaMarca(evento){
-    console.log(evento.target.textContent)
-    this.marca=evento.target.value
+    console.log(evento.target.textContent+'  '+evento.target.attributes[3].value)
+    this.marca=evento.target.attributes[3].value
     this.vermarca=evento.target.textContent
     document.getElementById("btnmarca").textContent = this.vermarca;
+
+    this.http.post(this.api, {
+      "iTipoCatalogo": "40",
+      "iModelo": this.anno,
+      "iMarca": this.marca,
+      "iSubramo": this.modelo,
+      "sDescripcion": ""
+    }).subscribe((data: any)=> {
+      console.log(data.catalogos)
+      this.descripciones=data.catalogos
+      })
+
+
   }
   descripcion: string  = '0'; // Iniciamos
   verdescripcion: string       = '';
   seleccionaDescip(evento){
-    console.log(evento.target.textContent)
-    this.descripcion=evento.target.value
+    console.log(evento.target.textContent+'    '+evento.target.attributes[3].value)
+    this.descripcion=evento.target.attributes[3].value
     this.verdescripcion=evento.target.textContent
     document.getElementById("btndescr").textContent = this.verdescripcion;
   }
