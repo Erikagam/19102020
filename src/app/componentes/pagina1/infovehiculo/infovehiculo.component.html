@@ -37,8 +37,8 @@
                       Modelo
                     </button>
                     <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" (click)="seleccionaModelo($event)" *ngFor="let modelo of modelos" [attr.data-modelo-id]="modelo.value" role="option">
-                        {{ modelo.label }}
+                      <a class="dropdown-item" (click)="seleccionaModelo($event)" *ngFor="let modelo of modelos" [attr.data-modelo-id]="modelo.sLlave" role="option">
+                        {{ modelo.sDato }}
                       </a>
                     </div>
                   </div>
@@ -56,8 +56,8 @@
                       Año
                     </button>
                     <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" (click)="seleccionaAnn($event)" *ngFor="let option of options" [attr.data-anno-id]="option.value" role="option">
-                        {{ option.label }}
+                      <a class="dropdown-item" (click)="seleccionaAnn($event)" *ngFor="let option of annos" [attr.data-anno-id]="option.sLlave" role="option">
+                        {{ option.sDato }}
                       </a>
                     </div>
                   </div>
@@ -75,8 +75,8 @@
                       Marca
                     </button>
                     <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" (click)="seleccionaMarca($event)" *ngFor="let option of options" [attr.data-marca-id]="option.value" role="option">
-                        {{ option.label }}
+                      <a class="dropdown-item" (click)="seleccionaMarca($event)" *ngFor="let option of annos" [attr.data-marca-id]="option.sLlave" role="option">
+                        {{ option.sDato }}
                       </a>
                     </div>
                   </div>  
@@ -94,8 +94,8 @@
                       Descripción
                     </button>
                     <div class="dropdown-menu" style="overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" (click)="seleccionaDescip($event)" *ngFor="let option of options" [attr.data-descripcion-id]="option.value" role="option">
-                        {{ option.label }}
+                      <a class="dropdown-item" (click)="seleccionaDescip($event)" *ngFor="let option of annos" [attr.data-descripcion-id]="option.sLlave" role="option">
+                        {{ option.sDato }}
                       </a>
                     </div>
                   </div>
