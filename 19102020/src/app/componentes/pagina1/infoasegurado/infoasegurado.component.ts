@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { disableDebugTools } from '@angular/platform-browser';
 
-
 @Component({
   selector: 'app-infoasegurado',
   templateUrl: './infoasegurado.component.html',
   styleUrls: ['./infoasegurado.component.css']
 })
 export class InfoaseguradoComponent implements OnInit {
+  // selected:string="";
   bisiesto: boolean;
   dias;
   meses;
@@ -20,11 +20,13 @@ export class InfoaseguradoComponent implements OnInit {
   mes: string  = ''; // Iniciamos mes 
   vermes: string        = '';
   capturarmes(evento) {
+    // ng-model="selectedItem" ng-options="item as item.name for item in items"
     this.dias=[]
     this.verdia=""
     this.dia=""
     document.getElementById("btndia").textContent = "Día";
     // console.log(evento.target.textContent)
+    console.log(this.selected)
     this.vermes=evento.target.textContent
     this.vermes=this.vermes.replace(/ /g,"")
     this.mes=evento.target.value

@@ -143,6 +143,20 @@
               </div>
           </div>
       </div>
+      <div class="row">
+        <ng-select         
+                bindLabel="name"
+                placeholder="Select item"
+                appendTo="body"
+                [searchable]="true" 
+                [clearable]="false"
+                [closeOnSelect]="true"
+                [(ngModel)]="selected" >
+                <ng-option [value]="item"  *ngFor=" let item of meses">
+                    {{item}}
+                </ng-option>
+    </ng-select>
+      </div>
      </div>
     </div>
 </div>

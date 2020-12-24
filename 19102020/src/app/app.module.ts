@@ -11,6 +11,7 @@ import { Pagina1Component } from './componentes/pagina1/pagina1.component';
 import { InfoaseguradoComponent } from './componentes/pagina1/infoasegurado/infoasegurado.component';
 import {InfovehiculoComponent} from './componentes/pagina1/infovehiculo/infovehiculo.component';
 import {Pagina2Component } from './componentes/pagina2/pagina2.component'
+import { NgSelectModule } from '@ng-select/ng-select';
 import { from } from 'rxjs';
 @NgModule({
   declarations: [AppComponent,
@@ -26,7 +27,8 @@ import { from } from 'rxjs';
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-     HttpClientModule
+     HttpClientModule,
+     NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent,HeaderComponent,FooterComponent,InfovehiculoComponent,InfoaseguradoComponent,Pagina1Component,Pagina2Component]
