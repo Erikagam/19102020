@@ -17,6 +17,7 @@ export class InfoaseguradoComponent implements OnInit {
   
   constructor(){
   } 
+  selected;
   mes: string  = ''; // Iniciamos mes 
   vermes: string        = '';
   capturarmes(evento) {
@@ -26,7 +27,7 @@ export class InfoaseguradoComponent implements OnInit {
     this.dia=""
     document.getElementById("btndia").textContent = "Día";
     // console.log(evento.target.textContent)
-    console.log(this.selected)
+    console.log(this.selected[0])
     this.vermes=evento.target.textContent
     this.vermes=this.vermes.replace(/ /g,"")
     this.mes=evento.target.value

@@ -31,7 +31,7 @@
                 <div class="row">
                   Mi auto es:
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                   <div class="dropdown">
                     <button class="btn model"  type="button" id="btnmodelo" data-toggle="dropdown" aria-haspopup="true"  >
                       Modelo
@@ -42,6 +42,22 @@
                       </a>
                     </div>
                   </div>
+                </div> -->
+                <div class="row">
+                  <ng-select 
+                    [items]="modelos"        
+                    bindLabel="sDato"
+                    placeholder="Modelo"
+                    appendTo="body"
+                    [searchable]="false"
+                    [clearable]="false"
+                    [closeOnSelect]="true"
+                    (change)="getModelo()"
+                    [(ngModel)]="modelosel" >
+                    <ng-option  ng-options="item as item.sLlave for item.sDato in modelos">
+                        {{item}}
+                    </ng-option>
+                  </ng-select>
                 </div>
               </div>
             </div>
@@ -50,7 +66,7 @@
                 <div class="row">
                   Año:
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                   <div class="dropdown">
                     <button class="btn model"  type="button" id="btnyear" data-toggle="dropdown" aria-haspopup="true"  >
                       Año
@@ -61,6 +77,22 @@
                       </a>
                     </div>
                   </div>
+                </div> -->
+                <div class="row">
+                  <ng-select 
+                    [items]="annos"        
+                    bindLabel="sDato"
+                    placeholder="Año"
+                    appendTo="body"
+                    [searchable]="false"
+                    [clearable]="false"
+                    [closeOnSelect]="true"
+                    (change)="getAnno()"
+                    [(ngModel)]="annosel" >
+                    <ng-option  ng-options="item as item.sLlave for item.sDato in annos">
+                        {{item}}
+                    </ng-option>
+                  </ng-select>
                 </div>
               </div>
             </div>
@@ -69,7 +101,7 @@
                 <div class="row">
                   Marca:
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                   <div class="dropdown">
                     <button class="btn model"  type="button" id="btnmarca" data-toggle="dropdown" aria-haspopup="true"  >
                       Marca
@@ -80,6 +112,22 @@
                       </a>
                     </div>
                   </div>  
+                </div> -->
+                <div class="row">
+                  <ng-select 
+                    [items]="marcas"        
+                    bindLabel="sDato"
+                    placeholder="Marca"
+                    appendTo="body"
+                    [searchable]="false" 
+                    [clearable]="false"
+                    [closeOnSelect]="true"
+                    (change)="getMarca()"
+                    [(ngModel)]="marcasel" >
+                    <ng-option  ng-options="item as item.sLlave for item.sDato in marcas">
+                        {{item}}
+                    </ng-option>
+                  </ng-select>
                 </div>
               </div>
             </div>
@@ -88,7 +136,7 @@
                 <div class="row">
                   Descripción:
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                   <div class="dropdown">
                     <button class="btn model" type="button" id="btndescr" data-toggle="dropdown" aria-haspopup="true"  >
                       Descripción
@@ -99,6 +147,22 @@
                       </a>
                     </div>
                   </div>
+                </div> -->
+                <div class="row">
+                  <ng-select 
+                    [items]="descripciones"        
+                    bindLabel="sDato"
+                    placeholder="Descripción"
+                    appendTo="body"
+                    [searchable]="true" 
+                    [clearable]="false"
+                    [closeOnSelect]="true"
+                    (change)="getDescripcion()"
+                    [(ngModel)]="descripsel" >
+                    <ng-option  ng-options="item as item.sLlave for item.sDato in descripciones">
+                        {{item}}
+                    </ng-option>
+                  </ng-select>
                 </div>
               </div>
             </div>
