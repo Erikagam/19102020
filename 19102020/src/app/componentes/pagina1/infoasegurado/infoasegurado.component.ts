@@ -14,7 +14,31 @@ export class InfoaseguradoComponent implements OnInit {
   fechaannos;
   mesdiabis: (string | number)[][];
   mesdia: (string | number)[][];
-  
+  //Valores botón descuento
+  descALTO=false;
+  descMEDIO=false;
+  descBAJO=false;
+  statusDA = "NoSelected";
+  statusDM= "NoSelected";
+  statusDB= "NoSelected";
+  Descuentoalto( ) {
+    // tiene selected this.statusDA
+    this. descALTO = !this. descALTO;
+    this.statusDA = this. descALTO ? "Selected"  :"NoSelected";
+    console.log("Descuento Alto:"+' '+this.descALTO+' '+this.statusDA)
+  }
+ Descuentomedio( ) {
+    // tiene selected this.statusDM
+    this. descMEDIO = !this. descMEDIO;
+    this.statusDM= this. descMEDIO ? "Selected" : "NoSelected";
+    console.log("Descuento Medio :"+' '+this.descMEDIO+' '+this.statusDM)
+  }
+  Descuentobajo( ) {
+    // tiene selected this.statusDB
+    this. descBAJO = !this. descBAJO;
+    this.statusDB= this. descBAJO ? "Selected" : "NoSelected" ;
+    console.log("Descuento Bajo :"+' '+this.descBAJO+' '+this.statusDB)
+  }
   constructor(){
   } 
   selected;

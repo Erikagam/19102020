@@ -82,3 +82,25 @@
 .mrtop{
   margin-top: 4.5rem;;
   }
+  .descuento{
+    /* Agregaste esto jueves */
+      padding-top: 1.375rem;
+      padding-bottom: 22px;
+      font-family: 'Exo 2', sans-serif;
+      font: 600;
+      height: max-content;
+      width: max-content;
+      /* margin-top: 30px;
+      margin-bottom: 30px; */
+      /* background-color:#ebebeb !important; */
+      border-radius: 30px !important;
+      color: #000000 !important;
+      /* display: ruby-base-container !important; */
+    }
+   
+    .Noselectap {
+      fill: -webkit-linear-gradient(1.25turn, #FF8F48,#FF6963);
+    }
+    .Selectap {
+      fill: #c5c5c4
+    }
