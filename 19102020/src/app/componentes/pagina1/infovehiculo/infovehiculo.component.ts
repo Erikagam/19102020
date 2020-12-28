@@ -10,7 +10,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./infovehiculo.component.css']
 })
 export class InfovehiculoComponent implements OnInit {
-  as: Response
   readonly api: string ="https://apitestcotizamatico.azurewebsites.net/api/catalogoCotizamaticoBr";
   constructor(private http:HttpClient){
   }
