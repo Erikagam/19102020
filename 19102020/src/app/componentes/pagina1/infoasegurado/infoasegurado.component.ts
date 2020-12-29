@@ -9,6 +9,44 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./infoasegurado.component.css']
 })
 export class InfoaseguradoComponent implements OnInit {
+  ngOnInit( ): void {
+    this.mesdiabis=[
+      ['Enero',31],
+      ['Febrero',29],
+      ['Marzo',31],
+      ['Abril',30],
+      ['Mayo',31],
+      ['Junio',30],
+      ['Julio',31],
+      ['Agosto',31],
+      ['Septiembre',30],
+      ['Octubre',31],
+      ['Noviembre',30],
+      ['Diciembre',31],
+    ]
+    this.mesdia=[
+      ['Enero',31],
+      ['Febrero',28],
+      ['Marzo',31],
+      ['Abril',30],
+      ['Mayo',31],
+      ['Junio',30],
+      ['Julio',31],
+      ['Agosto',31],
+      ['Septiembre',30],
+      ['Octubre',31],
+      ['Noviembre',30],
+      ['Diciembre',31],
+    ]
+    this.meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+    this.dias=[]
+    this.fechaannos=[]
+    var today = new Date();
+    var year = today.getFullYear();
+   for (let index = 1900; index <= year-18; index++) {// VALIDACION PARA QUE SEA MAYOR DE EDAD
+     this.fechaannos.push(index)
+   }
+  }
   // valores para código postal
   readonly api: string ="https://apitestcotizamatico.azurewebsites.net/api/catalogos";
   ubicacion: any;
@@ -45,44 +83,7 @@ export class InfoaseguradoComponent implements OnInit {
   statussoyempresa= "NoSelected";
   constructor(private http:HttpClient){
   }
-    ngOnInit( ): void {
-      this.mesdiabis=[
-        ['Enero',31],
-        ['Febrero',29],
-        ['Marzo',31],
-        ['Abril',30],
-        ['Mayo',31],
-        ['Junio',30],
-        ['Julio',31],
-        ['Agosto',31],
-        ['Septiembre',30],
-        ['Octubre',31],
-        ['Noviembre',30],
-        ['Diciembre',31],
-      ]
-      this.mesdia=[
-        ['Enero',31],
-        ['Febrero',28],
-        ['Marzo',31],
-        ['Abril',30],
-        ['Mayo',31],
-        ['Junio',30],
-        ['Julio',31],
-        ['Agosto',31],
-        ['Septiembre',30],
-        ['Octubre',31],
-        ['Noviembre',30],
-        ['Diciembre',31],
-      ]
-      this.meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-      this.dias=[]
-      this.fechaannos=[]
-      var today = new Date();
-      var year = today.getFullYear();
-     for (let index = 1900; index <= year-18; index++) {// VALIDACION PARA QUE SEA MAYOR DE EDAD
-       this.fechaannos.push(index)
-     }
-    }
+   
 //Funciones botones SOY
   Soymujer() {
     // tiene selected this.statussoymujer
