@@ -73,4 +73,6 @@
     height: 41px !important;
   }
  
- 
+  .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup, .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    white-space: unset !important;
+}
