@@ -99,16 +99,17 @@
                       </div>
                   </div> -->
                   <div class="row">
-                    <ng-select         
-                    bindLabel="name"
-                    placeholder="Día"
-                    appendTo="body"
-                    [searchable]="false" 
-                    [clearable]="false"
-                    [closeOnSelect]="true"
-                    (change)="getdia()"
-                    [(ngModel)]="selecteddia"
-                     >
+                    <ng-select
+                      style="width: 94px;"         
+                      bindLabel="name"
+                      placeholder="Día"
+                      appendTo="body"
+                      [searchable]="false" 
+                      [clearable]="false"
+                      [closeOnSelect]="true"
+                      (change)="getdia()"
+                      [(ngModel)]="selecteddia"
+                    >
                     <ng-option [value]="item"  *ngFor=" let item of dias">
                         {{item}}
                     </ng-option>
@@ -132,7 +133,8 @@
                   </div>
                  </div> -->
                  <div class="row">
-                    <ng-select         
+                    <ng-select
+                          style="width: 142px;"         
                           bindLabel="name"
                           placeholder="Mes"
                           appendTo="body"
@@ -165,7 +167,8 @@
                       </div>
                     </div> -->
                     <div class="row">
-                      <ng-select         
+                      <ng-select
+                            style="width: 94px;"          
                             bindLabel="name"
                             placeholder="Año"
                             appendTo="body"

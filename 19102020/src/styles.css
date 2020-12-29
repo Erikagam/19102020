@@ -34,3 +34,43 @@
   .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
       background-color: chocolate;
   }
+  .ng-dropdown-panel .scroll-host {
+    -webkit-overflow-scrolling: touch !important;
+    display: block !important;
+    overflow: hidden !important;
+        overflow-y: hidden !important;
+    overflow-y: auto !important;
+    position: relative !important;
+  }
+  .ng-dropdown-panel .ng-dropdown-panel-items {
+    box-sizing: border-box !important;
+    display: block !important;
+    height: auto !important;
+    max-height: 240px !important;
+    overflow-y: auto !important;
+  }
+  .ng-select-container{
+    border-left-width: 1px !important;
+    border-top-width: 1px !important;
+    border-bottom-width: 1px !important;
+    border-right-width: 1px !important;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-color: #000 !important;
+  }
+  .ng-arrow-wrapper{
+    border-top-width: 0px !important;
+    border-top-style: solid !important;
+    margin-top: 15px !important;
+    top: -4px !important;
+    margin-left: 0px !important;
+  }
+  .ng-select .ng-arrow-wrapper {
+    width: 25px !important;
+    padding-right: 1px !important;
+    height: 41px !important;
+  }
+ 
+ 
