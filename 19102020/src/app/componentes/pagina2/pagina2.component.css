@@ -194,3 +194,32 @@ border-style: solid;
 
 
 
+@media (max-width: 576px) {
+  .Noselect {
+    height: 144px;
+    width: 63px;
+  }
+  .Select{
+    height: 144px;
+    width: 63px;
+  }
+
+  .btn.poliza{
+    font-size: 0.8rem;
+  }
+  .btn.descuento, .btn.pago{
+    font-size: 0.6rem;
+  
+  }
+  .btn.pago>label>svg#calendar{
+    margin-left: -13px !important;
+  }
+  .btn.pago>label>svg#moneda{
+    margin-top: -10px !important;
+    margin-left: 19px !important;
+  }
+  .btn.descuento>svg{
+    margin-left: -25px;
+  }
+  
+ }
