@@ -99,8 +99,8 @@
     }
    
     .Noselectap {
-      fill: -webkit-linear-gradient(1.25turn, #FF8F48,#FF6963);
+      fill: #c5c5c4
     }
     .Selectap {
-      fill: #c5c5c4
+      fill: -webkit-linear-gradient(1.25turn, #FF8F48,#FF6963);
     }
