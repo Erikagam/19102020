@@ -76,3 +76,7 @@
   .ng-dropdown-panel .ng-dropdown-panel-items .ng-optgroup, .ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
     white-space: unset !important;
 }
+.ng-option.disabled{
+  color: #ccc !important;
+  font-size: 14px !important;
+}

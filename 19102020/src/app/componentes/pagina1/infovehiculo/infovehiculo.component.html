@@ -91,6 +91,11 @@
                     [closeOnSelect]="true"
                     (change)="getAnno()"
                     [(ngModel)]="annosel" >
+                    <ng-template ng-notfound-tmp >
+                        <div class="ng-option disabled">
+                            No hay años que mostrar
+                        </div>
+                    </ng-template>
                     <ng-option  ng-options="item as item.sLlave for item.sDato in annos">
                         {{item}}
                     </ng-option>
@@ -130,6 +135,11 @@
                     <ng-option  ng-options="item as item.sLlave for item.sDato in marcas">
                         {{item}}
                     </ng-option>
+                    <ng-template ng-notfound-tmp >
+                      <div class="ng-option disabled">
+                          No hay marcas que mostrar
+                      </div>
+                  </ng-template>
                   </ng-select>
                 </div>
               </div>
@@ -165,6 +175,11 @@
                     <ng-option  ng-options="item as item.sLlave for item.sDato in descripciones">
                         {{item}}
                     </ng-option>
+                    <ng-template ng-notfound-tmp let-searchTerm="searchTerm" >
+                      <div class="ng-option disabled" style="font-size: 11px !important;">
+                          No hay descripción que coincida con "{{searchTerm}}"
+                      </div>
+                  </ng-template>
                   </ng-select>
                  
                 </div>
