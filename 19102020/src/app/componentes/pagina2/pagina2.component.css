@@ -221,5 +221,8 @@ border-style: solid;
   .btn.descuento>svg{
     margin-left: -25px;
   }
-  
+  #mensual.col.px-0{
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+  }
  }
