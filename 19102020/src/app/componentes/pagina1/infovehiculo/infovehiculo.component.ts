@@ -194,10 +194,10 @@ export class InfovehiculoComponent implements OnInit {
     }).subscribe((data: any)=> {
       console.log(data.catalogos)
       this.descripciones=data.catalogos
-      this.descripciones.forEach(element => {
-        element.sDato=element.sDato.replace("ABS","\nABS")
-        console.log(element.sDato)
-      });
+      // this.descripciones.forEach(element => {
+      //   element.sDato=element.sDato.replace("ABS","\nABS")
+      //   console.log(element.sDato)
+      // });
       })
 
     

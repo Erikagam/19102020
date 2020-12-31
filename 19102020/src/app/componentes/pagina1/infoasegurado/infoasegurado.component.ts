@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./infoasegurado.component.css']
 })
 export class InfoaseguradoComponent implements OnInit {
+  
   ngOnInit( ): void {
     this.mesdiabis=[
       ['Enero',31],
@@ -39,11 +40,23 @@ export class InfoaseguradoComponent implements OnInit {
       ['Diciembre',31],
     ]
     this.meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-    this.dias=[]
+    this.dias=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,23,24,25,26,27,28,29,30,31]
     this.fechaannos=[]
     var today = new Date();
-    var year = today.getFullYear();
-   for (let index = 1900; index <= year-18; index++) {// VALIDACION PARA QUE SEA MAYOR DE EDAD
+    this.year = today.getFullYear();
+    this.date=today.getDate();
+    this.month=today.getMonth();
+    console.log(today)
+    console.log(this.date) //numero del dia
+    this.selecteddia=this.date
+    this.verdia=this.selecteddia
+    console.log(this.month)
+    this.selectedmes=this.meses[this.month]
+    this.vermes=this.selectedmes
+    console.log(this.year)
+    this.selectedyear=this.year
+    this.verfechaann=this.selectedyear
+   for (let index = 1900; index <= this.year-18; index++) {// VALIDACION PARA QUE SEA MAYOR DE EDAD
      this.fechaannos.push(index)
    }
   }
@@ -57,6 +70,9 @@ export class InfoaseguradoComponent implements OnInit {
   colonia: string;
   bisiesto: boolean;
   // Valores selección fecha
+  year;
+  month;
+  date;
   dias;
   meses;
   fechaannos;
@@ -140,27 +156,50 @@ export class InfoaseguradoComponent implements OnInit {
   
   //Funciones selección fecha de nacimiento
   getmes(){
-     // Siguientes 3 lineas limpian días
-     this.selecteddia=''
-     this.dias=[]
-     this.verdia=""
-     this.dia=""
+    // Limpia día
+    this.selecteddia=""
+    this.verdia=""
     console.log(this.selectedmes)
     this.vermes=this.selectedmes
     this.calculabis()
   }
   getanno(){
-    // Siguientes 3 lineas limpian días
-    this.selecteddia=''
-    this.dias=[]
+    // Limpia
+    this.selecteddia=""
     this.verdia=""
-    this.dia=""
     console.log(this.selectedyear)
     this.verfechaann=this.selectedyear
     this.calculabis() 
   }
   getdia(){
     console.log(this.selecteddia)
+    this.verdia=this.selecteddia
+    this.calculabis()
+    if (this.selecteddia<=28) {
+      this.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']
+      if (this.selecteddia!='' && this.verdia!='' && this.verfechaann!='' && this.selectedyear!='') {
+        this.calculabis()
+      } else {
+        console.log('Algo falló')
+      }
+    } else {
+      if (this.selecteddia<=29) {
+        this.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']
+        if (this.selecteddia!='' && this.verdia!='' && this.verfechaann!='' && this.selectedyear!='') {
+          this.calculabis()
+        } else {
+          console.log('Algo falló')
+        }
+        } else {
+            if (this.selecteddia<=30) {
+              this.meses=['Enero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']
+            }else {
+              if (this.selecteddia<=31) {
+              this.meses=['Enero','Marzo','Mayo','Julio','Agosto','Octubre','Diciembre']
+              } 
+            }
+          }
+    }
   }
   
 //Función para determinar tipo de año (bisiesto/ no bisiesto)
@@ -172,17 +211,19 @@ export class InfoaseguradoComponent implements OnInit {
     //this.bisiesto ? (console.log(this.mesdiabis)) :(console.log(this.mesdia))
     if (this.bisiesto) {
       console.log(numerican  +' '+"BISIESTO")
+      this.dias=[];
       for (let index = 0; index < 12; index++) {
         if (this.mesdiabis[index][0]==this.vermes) {
           var hastaaquibi = Number(this.mesdiabis[index][1]);
           console.log( hastaaquibi +' '+ this.vermes)
-          for (let index = 1 ; index <= hastaaquibi; index++) {
-            this.dias.push(index)
-          }
+            for (let index = 1 ; index <= hastaaquibi; index++) {
+              this.dias.push(index)
+            }
         }
       }
     } else {
       console.log(numerican +' '+"NO BISIESTO")
+      this.dias=[];
       for (let index = 0; this.mesdia.length; index++) {
         if (this.mesdia[index][0]===this.vermes) {
           var hastaaqui = Number(this.mesdia[index][1]);
