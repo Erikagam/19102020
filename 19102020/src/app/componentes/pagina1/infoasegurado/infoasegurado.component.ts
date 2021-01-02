@@ -174,8 +174,9 @@ export class InfoaseguradoComponent implements OnInit {
   getdia(){
     console.log(this.selecteddia)
     this.verdia=this.selecteddia
-    this.calculabis()
-    if (this.selecteddia<=28) {
+    var num= parseInt(this.selecteddia, 10)     
+    if (num==28) {
+      console.log(" 1 if 28")
       this.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']
       if (this.selecteddia!='' && this.verdia!='' && this.verfechaann!='' && this.selectedyear!='') {
         this.calculabis()
@@ -183,7 +184,8 @@ export class InfoaseguradoComponent implements OnInit {
         console.log('Algo falló')
       }
     } else {
-      if (this.selecteddia<=29) {
+      if (num==29) {
+        console.log("2 if 29")
         this.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']
         if (this.selecteddia!='' && this.verdia!='' && this.verfechaann!='' && this.selectedyear!='') {
           this.calculabis()
@@ -191,12 +193,22 @@ export class InfoaseguradoComponent implements OnInit {
           console.log('Algo falló')
         }
         } else {
-            if (this.selecteddia<=30) {
+            if (num==30 ) {
+              console.log("3 if 30")
               this.meses=['Enero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']
+              this.calculabis()
             }else {
-              if (this.selecteddia<=31) {
-              this.meses=['Enero','Marzo','Mayo','Julio','Agosto','Octubre','Diciembre']
-              } 
+              if (num==31) {
+                console.log("4 if 31")
+                this.meses=['Enero','Marzo','Mayo','Julio','Agosto','Octubre','Diciembre']
+              this.calculabis()
+                 
+              }  else {
+                  console.log("5 if < 28")
+                  this.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']  
+              this.calculabis()
+
+              }
             }
           }
     }
