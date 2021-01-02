@@ -104,3 +104,11 @@
     .Selectap {
       fill: -webkit-linear-gradient(1.25turn, #FF8F48,#FF6963);
     }
+    .NoExiste{
+      border: 1px solid #ff0707 !important;
+      box-shadow: 0 0 0 .2rem rgba(255, 0, 0, 0.25);
+    }
+    .Existe{
+      border: 1px solid #ced4da;
+      box-shadow: 0 0 0 .2rem rgba(0,123,255,.25);
+    }
