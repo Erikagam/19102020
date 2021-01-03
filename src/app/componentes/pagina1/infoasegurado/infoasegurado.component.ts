@@ -1,143 +1,243 @@
 import { Component, OnInit } from '@angular/core';
-import { disableDebugTools } from '@angular/platform-browser';
+import {HttpClient} from '@angular/common/http'
+import { Observable } from 'rxjs';
+
+//  para añadir script import * as $ from 'jquery'; 
 
 
 @Component({
-  selector: 'app-infoasegurado',
-  templateUrl: './infoasegurado.component.html',
-  styleUrls: ['./infoasegurado.component.css']
+  selector: 'app-infovehiculo',
+  templateUrl: './infovehiculo.component.html',
+  styleUrls: ['./infovehiculo.component.css']
 })
-export class InfoaseguradoComponent implements OnInit {
-  bisiesto: boolean;
-  dias;
-  meses;
-  fechaannos;
-  mesdiabis: (string | number)[][];
-  mesdia: (string | number)[][];
-  
-  constructor(){
-  } 
-  mes: string  = ''; // Iniciamos mes 
-  vermes: string        = '';
-  capturarmes(evento) {
-    this.dias=[]
-    this.verdia=""
-    this.dia=""
-    document.getElementById("btndia").textContent = "Día";
-    // console.log(evento.target.textContent)
-    this.vermes=evento.target.textContent
-    this.vermes=this.vermes.replace(/ /g,"")
-    this.mes=evento.target.value
-    document.getElementById("btnmes").textContent = this.vermes;
-    this.calculabis()
+export class InfovehiculoComponent implements OnInit {
+  readonly api: string ="https://apitestcotizamatico.azurewebsites.net/api/catalogoCotizamaticoBr";
+  constructor(private http:HttpClient){
   }
   
-  fechaann: string  = ''; // Iniciamos fechaann 
-  verfechaann: string        = '';
-  capturarfechaann(evento) {
-    // console.log(evento.target.textContent)
-    //siguientes 3 lineas limpian la seleccion anterior
-    this.dias=[]
-    this.verdia=""
-    this.dia=""
-    document.getElementById("btndia").textContent = "Día";
-    this.verfechaann=evento.target.textContent
-    this.verfechaann=this.verfechaann.replace(/ /g,"")
-    this.fechaann=evento.target.value
-    document.getElementById("btnnacann").textContent = this.verfechaann;
-    this.calculabis()
+  annos: {sLlave: string; sDato: string; }[];
+  modelos: { sLlave: number; sDato: string; }[];
+  marcas: { sLlave: number; sDato: string; }[];
+  descripciones: { sLlave: number; sDato: string; }[];
+  modelosel;
+  annosel;
+  marcasel;
+  descripsel;
+  item:string='';
+  
+  
+  modelo: string  = '0'; // Iniciamos
+  vermodelo: string        = '';
+  anno: string  = '0'; // Iniciamos
+  veranno: string        = '';
+  marca: string  = '0'; // Iniciamos
+  vermarca: string        = '';
+  descripcion: string  = '0'; // Iniciamos
+  verdescripcion: string       = '';
+  //DD
+  //   seleccionaModelo(evento){
+    //     //siguientes 12 lineas limpian la seleccion anterior
+//     this.annos=[]
+//     this.marcas=[]
+//     this.descripciones=[]
+//     this.anno=""
+//     this.veranno=""
+//     document.getElementById("btnyear").textContent = "Año";
+//     this.marca=""
+//     this.vermarca=""
+//     document.getElementById("btnmarca").textContent = "Marca";
+//     this.descripcion=""
+//     this.verdescripcion=""
+//     document.getElementById("btndescr").textContent = "Descripción";
+//     console.log(evento.target.textContent+'   '+evento.target.attributes[3].value )
+//     this.modelo=evento.target.attributes[3].value
+//     this.vermodelo=evento.target.textContent
+//     document.getElementById("btnmodelo").textContent = this.vermodelo;
+//         this.http.post(this.api, {
+//           "iTipoCatalogo": "20",
+//           "iModelo": "00",
+//           "iMarca": "0",
+//           "iSubramo": this.modelo,
+//           "sDescripcion": ""
+//         }).subscribe((data: any)=> {
+//           console.log(data.catalogos)
+//           this.annos=data.catalogos
+//         })
+// }
+  // seleccionaAnn(evento){
+  //       //siguientes 8 lineas limpian la seleccion anterior
+  //       this.marcas=[]
+  //       this.descripciones=[]
+  //       this.marca=""
+  //       this.vermarca=""
+  //       document.getElementById("btnmarca").textContent = "Marca";
+  //       this.descripcion=""
+  //       this.verdescripcion=""
+  //       document.getElementById("btndescr").textContent = "Descripción";
+  //   console.log(evento.target.textContent + '  ' +evento.target.attributes[3].value)
+  //   this.anno=evento.target.attributes[3].value
+  //   this.veranno=evento.target.textContent
+  //   document.getElementById("btnyear").textContent = this.veranno;
+  //   this.http.post(this.api, {
+  //     "iTipoCatalogo": "30",
+  //     "iModelo": this.anno,
+  //     "iMarca": "0",
+  //     "iSubramo": this.modelo,
+  //     "sDescripcion": ""
+  //   }).subscribe((data: any)=> {
+  //     console.log(data.catalogos)
+  //     this.marcas=data.catalogos
+  //     })
+  // }
+  // seleccionaMarca(evento){
+  //   //siguientes 5 lineas limpian la seleccion anterior
+  //   this.descripciones=[]
+  //   this.descripcion=""
+  //   this.verdescripcion=""
+  //   document.getElementById("btndescr").textContent = "Descripción";
+  //   console.log(evento.target.textContent+'  '+evento.target.attributes[3].value)
+  //   this.marca=evento.target.attributes[3].value
+  //   this.vermarca=evento.target.textContent
+  //   document.getElementById("btnmarca").textContent = this.vermarca;
+  //   this.http.post(this.api, {
+  //     "iTipoCatalogo": "40",
+  //     "iModelo": this.anno,
+  //     "iMarca": this.marca,
+  //     "iSubramo": this.modelo,
+  //     "sDescripcion": ""
+  //   }).subscribe((data: any)=> {
+  //     console.log(data.catalogos)
+  //     this.descripciones=data.catalogos
+  //     })
+  // }
+  // seleccionaDescip(evento){
+  //   console.log(evento.target.textContent+'    '+evento.target.attributes[3].value)
+  //   this.descripcion=evento.target.attributes[3].value
+  //   this.verdescripcion=evento.target.textContent
+  //   document.getElementById("btndescr").textContent = this.verdescripcion;
+  // }
+  
+  getModelo() {
+      // Limpia los select restantes
+      this.annos=[]
+      this.annosel=''
+      this.veranno=''
+      this.anno=''
+      this.marcas=[]
+      this.marcasel=''
+      this.vermarca=''
+      this.marca=''
+      this.descripciones=[]
+      this.descripsel=''
+      this.verdescripcion=''
+      this.descripcion=''
+      // Muestra modelo Seleccinonado
+      console.log(this.modelosel.sDato+'  '+this.modelosel.sLlave)
+      this.modelo=this.modelosel.sLlave
+      this.vermodelo= this.modelosel.sDato
+      //API
+      this.http.post(this.api, {
+        "iTipoCatalogo": "20",
+        "iModelo": "00",
+        "iMarca": "0",
+        "iSubramo": this.modelo,
+        "sDescripcion": ""
+      }).subscribe((data: any)=> {
+        console.log(data.catalogos)
+        this.annos=data.catalogos
+      })
+  }
+  getAnno() {
+    // Limpia los select restantes
+    this.marcas=[]
+    this.marcasel=''
+    this.vermarca=''
+    this.marca=''
+    this.descripciones=[]
+    this.descripsel=''
+    this.verdescripcion=''
+    this.descripcion=''
+    // Muestra año Seleccinonado
+    console.log(this.annosel.sDato+'  '+this.annosel.sLlave)
+    this.anno=this.annosel.sLlave
+    this.veranno= this.annosel.sDato
+    //API
+    this.http.post(this.api, {
+        "iTipoCatalogo": "30",
+        "iModelo": this.anno,
+        "iMarca": "0",
+        "iSubramo": this.modelo,
+        "sDescripcion": ""
+      }).subscribe((data: any)=> {
+        console.log(data.catalogos)
+        this.marcas=data.catalogos
+        })
+  
+  }
+  getMarca(){
+    // Limpia los select restantes
+    this.descripciones=[]
+    this.descripsel=''
+    this.verdescripcion=''
+    this.descripcion=''
+    // Muestra marca seleccionada
+    console.log(this.marcasel.sDato+'  '+this.marcasel.sLlave)
+    this.marca=this.marcasel.sLlave
+    this.vermarca= this.marcasel.sDato
+    // API
+    this.http.post(this.api, {
+      "iTipoCatalogo": "40",
+      "iModelo": this.anno,
+      "iMarca": this.marca,
+      "iSubramo": this.modelo,
+      "sDescripcion": ""
+    }).subscribe((data: any)=> {
+      console.log(data.catalogos)
+      this.descripciones=data.catalogos
+      // this.descripciones.forEach(element => {
+      //   element.sDato=element.sDato.replace("ABS","\nABS")
+      //   console.log(element.sDato)
+      // });
+      })
+
+    
+  }
+  getDescripcion(){
+    
+    // Muestra marca seleccionada
+    console.log(this.descripsel.sDato+'  '+this.descripsel.sLlave)
+    this.descripcion=this.descripsel.sLlave
+    this.verdescripcion= this.descripsel.sDato
+  }  
+  getmodels(){
+      this.http.post(this.api, {
+        "iTipoCatalogo": "10",
+        "iModelo": "00",
+        "iMarca": "0",
+        "iSubramo": "00",
+        "sDescripcion": ""
+      }).subscribe((data: any)=> {
+  console.log(data.catalogos)
+  this.modelos=data.catalogos
+            
+  // este es codigo anterior *por si vuelve a lo antiguo xD
+      //   let x: Response = data
+      //   let y= JSON.parse(x.CatalogoJsonString)
+      //   let marcs= Object.values(y)
+      //   let c: Array<any>=[]
+      //   marcs.map(value => {
+      //     c.push(value)
+      //   })
+      //   let limpio: Response={
+      //     CatalogoJsonString: c,
+      //     Error: null
+      //   }
+      //   this.as=limpio
+      // console.log(limpio)
+      //   return limpio
+      })
     }
-  
-
-  dia: string  = ''; // Iniciamos dia
-// console.log(this.mesdiabis[0][1])//DIAS
-// console.log(this.mesdiabis[0][0])//MESES
-  verdia: string        = '';
-  capturardia(evento) {
-    this.verdia=evento.target.textContent
-    this.verdia=this.verdia.replace(/ /g,"")
-    this.dia=evento.target.value
-    document.getElementById("btndia").textContent = this.verdia;
+  ngOnInit(): void {
+    this.getmodels()
   }
-  
-
-  calculabis() {
-    if (this.verfechaann!='' && this.vermes!='') {
-      var numerican = Number(this.verfechaann);
-      console.log(this.verfechaann+' ' + this.vermes)
-    numerican%4==0 ?(numerican%100==0 ?(numerican%400==0 ?(this.bisiesto=true) : (this.bisiesto=false)) : (this.bisiesto=true)) : (this.bisiesto=false)
-    //this.bisiesto ? (console.log(this.mesdiabis)) :(console.log(this.mesdia))
-    if (this.bisiesto) {
-      console.log(numerican  +' '+"BISIESTO")
-      for (let index = 0; index < 12; index++) {
-        if (this.mesdiabis[index][0]==this.vermes) {
-          var hastaaquibi = Number(this.mesdiabis[index][1]);
-          console.log( hastaaquibi +' '+ this.vermes)
-          for (let index = 1 ; index <= hastaaquibi; index++) {
-            this.dias.push(index)
-          }
-        }
-      }
-    } else {
-      console.log(numerican +' '+"NO BISIESTO")
-      for (let index = 0; this.mesdia.length; index++) {
-        if (this.mesdia[index][0]===this.vermes) {
-          var hastaaqui = Number(this.mesdia[index][1]);
-          console.log(this.mesdia[index][1])
-          console.log( hastaaqui+' '+ this.vermes)
-          for (let index = 1 ; index <= hastaaqui; index++) {
-            this.dias.push(index)
-          }
-        }
-      }
-      }
-    }else{
-      console.log("Te falta")
-    }
-  }
-    ngOnInit( ): void {
-      this.mesdiabis=[
-        ['Enero',31],
-        ['Febrero',29],
-        ['Marzo',31],
-        ['Abril',30],
-        ['Mayo',31],
-        ['Junio',30],
-        ['Julio',31],
-        ['Agosto',31],
-        ['Septiembre',30],
-        ['Octubre',31],
-        ['Noviembre',30],
-        ['Diciembre',31],
-      ]
-      this.mesdia=[
-        ['Enero',31],
-        ['Febrero',28],
-        ['Marzo',31],
-        ['Abril',30],
-        ['Mayo',31],
-        ['Junio',30],
-        ['Julio',31],
-        ['Agosto',31],
-        ['Septiembre',30],
-        ['Octubre',31],
-        ['Noviembre',30],
-        ['Diciembre',31],
-      ]
-      this.meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
-      this.dias=[]
-      this.fechaannos=[]
-      var today = new Date();
-      var year = today.getFullYear();
-     for (let index = 1900; index <= year-18; index++) {// VALIDACION PARA QUE SEA MAYOR DE EDAD
-       this.fechaannos.push(index)
-     }
-    }
-  }
-
-  
-  
-
-  
-
-
+}

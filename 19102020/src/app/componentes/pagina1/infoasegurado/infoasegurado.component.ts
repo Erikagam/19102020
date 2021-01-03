@@ -9,7 +9,7 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./infoasegurado.component.css']
 })
 export class InfoaseguradoComponent implements OnInit {
-  
+  existe:boolean; 
   ngOnInit( ): void {
     this.mesdiabis=[
       ['Enero',31],
@@ -255,6 +255,7 @@ export class InfoaseguradoComponent implements OnInit {
   onCodigoPostalKeyUp(event) {
     console.log(event);
     if (this.codigoPostal.length < 5) {
+      this.existe=false
       console.log('No se puede validar un CP menor a 5 caracteres');
       return;
     }
@@ -264,12 +265,20 @@ export class InfoaseguradoComponent implements OnInit {
       "Filtro": this.codigoPostal
     }).subscribe((data: any)=> {
       // console.log(data.CatalogoJsonString)
-      this.ubicacion = JSON.parse(data.CatalogoJsonString);
-      this.estado = this.ubicacion[0].Municipio.Estado.sEstado;
-      this.municipio = this.ubicacion[0].Municipio.sMunicipio;
-      this.colonia = this.ubicacion[0].Ubicacion[0].sUbicacion;
-      this.ubicacionId = this.ubicacion[0].Ubicacion[0].iIdUbicacion;
-      console.log(this.estado+'  '+ this.municipio +'  '+ this.colonia+'  '+ this.ubicacionId)
+      if (data.Error != null) {
+        this.existe=false
+        console.log("No existe")
+        return;
+      } else {
+        this.existe=true
+        this.ubicacion = JSON.parse(data.CatalogoJsonString);
+        this.estado = this.ubicacion[0].Municipio.Estado.sEstado;
+        this.municipio = this.ubicacion[0].Municipio.sMunicipio;
+        this.colonia = this.ubicacion[0].Ubicacion[0].sUbicacion;
+        this.ubicacionId = this.ubicacion[0].Ubicacion[0].iIdUbicacion;
+        console.log(this.estado+'  '+ this.municipio +'  '+ this.colonia+'  '+ this.ubicacionId)
+      }
+      
       })
   }
 

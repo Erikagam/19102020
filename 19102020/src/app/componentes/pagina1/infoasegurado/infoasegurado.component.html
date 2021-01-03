@@ -26,23 +26,22 @@
       </div>
       <div class="row">
         <div class="form-group col-md-4">
-          <label style="margin-top: 0px;">
-            Nombre
-          </label>
-          <input type="text" class="form-control" id="Name" style="margin-top: 4px;">
+          <label style="margin-top: 0px;" for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" value="Ingrese nombre" style="margin-top: 4px;" required>
         </div>
         <div class="form-group col-md-5">
-          <label for="inputEmail4">
+          <label for="email">            
             <svg fill="url(#gradiente)" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M13.718 10.528c0 .792-.268 1.829-.684 2.642-1.009 1.98-3.063 1.967-3.063-.14 0-.786.27-1.799.687-2.58 1.021-1.925 3.06-1.624 3.06.078zm10.282 1.472c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12zm-5-1.194c0-3.246-2.631-5.601-6.256-5.601-4.967 0-7.744 3.149-7.744 7.073 0 3.672 2.467 6.517 7.024 6.517 2.52 0 4.124-.726 5.122-1.288l-.687-.991c-1.022.593-2.251 1.136-4.256 1.136-3.429 0-5.733-2.199-5.733-5.473 0-5.714 6.401-6.758 9.214-5.071 2.624 1.642 2.524 5.578.582 7.083-1.034.826-2.199.799-1.821-.756 0 0 1.212-4.489 1.354-4.975h-1.364l-.271.952c-.278-.785-.943-1.295-1.911-1.295-2.018 0-3.722 2.19-3.722 4.783 0 1.73.913 2.804 2.38 2.804 1.283 0 1.95-.726 2.364-1.373-.3 2.898 5.725 1.557 5.725-3.525z"/></svg>
-            Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+            Email
+          </label>
+          <input type="text" class="form-control" id="email" value="Ingrese email" required>
         </div>
         <div class="form-group col-md-3">
-          <label>
-            <svg fill="url(#gradiente)" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>
-            Teléfono</label>
-          <input type="text" maxlength="10" name="documento" id="inputPhone"  class="form-control"
-              required autocomplete="off" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" />
+              <label for="telefono">
+                <svg fill="url(#gradiente)" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg>
+                Teléfono
+              </label>
+              <input  maxlength="10" type="text" class="form-control" id="telefono" value="" required autocomplete="off" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1">
         </div>
       </div>
       <div class="row">
@@ -210,9 +209,10 @@
                 </div> -->
                 <div class="row">
                   <input type="text"  class="form-control" id="txtCodigo" name="txtCodigo" (keyup.enter)="onCodigoPostalKeyUp($event)" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1"
-                   maxlength="5" [(ngModel)]="codigoPostal">
-        
+                   maxlength="5" [(ngModel)]="codigoPostal" [ngClass]="{'Existe' : existe, 'NoExiste': !existe || codigoPostal=='' }" >
+                   
                 </div>
+                
               </div>
           </div>
       </div>
@@ -220,4 +220,6 @@
      </div>
     </div>
 </div>
+
 </div>
+
