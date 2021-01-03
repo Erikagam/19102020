@@ -129,6 +129,11 @@
                       <ng-option [value]="item"  *ngFor=" let item of dias">
                           {{item}}
                       </ng-option>
+                      <ng-template ng-notfound-tmp >
+                        <div class="ng-option disabled">
+                            No hay días que mostrar
+                        </div>
+                      </ng-template>
                     </ng-select>
                   </div>
                  </div>
@@ -163,6 +168,11 @@
                           <ng-option [value]="item"  *ngFor=" let item of meses">
                               {{item}}
                           </ng-option>
+                          <ng-template ng-notfound-tmp >
+                            <div class="ng-option disabled">
+                                No hay meses que mostrar
+                            </div>
+                          </ng-template>
                   </ng-select>
                  </div>
                 </div>
@@ -196,6 +206,11 @@
                             <ng-option [value]="item"  *ngFor=" let item of fechaannos">
                                 {{item}}
                             </ng-option>
+                            <ng-template ng-notfound-tmp >
+                              <div class="ng-option disabled">
+                                  No hay años que mostrar
+                              </div>
+                            </ng-template>
                     </ng-select>
                    </div>
                   </div>

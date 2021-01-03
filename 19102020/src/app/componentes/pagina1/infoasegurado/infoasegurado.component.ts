@@ -241,8 +241,8 @@ export class InfoaseguradoComponent implements OnInit {
         }
       }
     } else {
-      console.log(numerican +' '+"NO BISIESTO")
-      this.dias=[];
+      if (this.bisiesto) {
+        console.log(numerican +' '+"NO BISIESTO")
       for (let index = 0; this.mesdia.length; index++) {
         if (this.mesdia[index][0]===this.vermes) {
           var hastaaqui = Number(this.mesdia[index][1]);
@@ -252,6 +252,7 @@ export class InfoaseguradoComponent implements OnInit {
             this.dias.push(index)
           }
         }
+      }
       }
       }
     }else{
