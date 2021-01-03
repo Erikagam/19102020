@@ -10,6 +10,10 @@ import {HttpClient} from '@angular/common/http'
 })
 export class InfoaseguradoComponent implements OnInit {
   existe:boolean; 
+  existeT: boolean;
+  tam:number
+  vacemial: boolean;
+  vacnom: boolean;
   ngOnInit( ): void {
     this.mesdiabis=[
       ['Enero',31],
@@ -63,7 +67,10 @@ export class InfoaseguradoComponent implements OnInit {
   // valores para código postal
   readonly api: string ="https://apitestcotizamatico.azurewebsites.net/api/catalogos";
   ubicacion: any;
-  codigoPostal;
+  codigoPostal: string ='';
+  TELEFONO: string ='';
+  EMAIL: string ='';
+  NOMBRE: string ='';
   ubicacionId: number;
   estado: string;
   municipio: string;
@@ -251,12 +258,39 @@ export class InfoaseguradoComponent implements OnInit {
       console.log("Te falta")
     }
   }
+  //Función teléfono
+  onTelefono(event) {
+    console.log(event);
+    if (this.TELEFONO.length < 10 || this.TELEFONO=='') {
+      if (this.TELEFONO.length>=1 && this.TELEFONO.length <10) {
+        this.existeT=false
+        console.log('No se puede validar un teléfono menor a 10 caracteres');
+        return;
+      } else {
+        if (this.TELEFONO=='') {
+          this.existeT=false
+          console.log('No se puede validar un teléfono vacío');
+          return;
+        }  
+      }
+    }else{
+      if (this.TELEFONO.length==10 && this.TELEFONO!='') {
+        this.existeT=true;
+      }
+    }
+  }
 //Función codigo postal
   onCodigoPostalKeyUp(event) {
+    this.tam=this.codigoPostal.length
     console.log(event);
-    if (this.codigoPostal.length < 5) {
+    if (this.codigoPostal.length < 5 && this.codigoPostal!='') {
       this.existe=false
       console.log('No se puede validar un CP menor a 5 caracteres');
+      return;
+    }
+    if(this.codigoPostal=='') {
+      this.existe=false
+      console.log('No se puede validar un CP vacío');
       return;
     }
     this.http.post(this.api, {
@@ -281,8 +315,30 @@ export class InfoaseguradoComponent implements OnInit {
       
       })
   }
-
- 
+//Función codigo email
+  onEmail(event) {
+    console.log(event);
+    console.log(this.EMAIL)
+    if (this.EMAIL=='') {
+      this.vacemial=false
+    } else {
+      if (this.EMAIL!='') {
+        this.vacemial=true
+      }
+    }
+  }
+ //Función nombre
+ onNombre(event) {
+  console.log(event);
+  console.log(this.NOMBRE)
+  if (this.NOMBRE=='') {
+    this.vacnom=false
+  } else {
+    if (this.NOMBRE!='') {
+      this.vacnom=true
+    }
+  }
+}
   }
 
   

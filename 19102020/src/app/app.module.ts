@@ -13,6 +13,7 @@ import {InfovehiculoComponent} from './componentes/pagina1/infovehiculo/infovehi
 import {Pagina2Component } from './componentes/pagina2/pagina2.component'
 import { NgSelectModule } from '@ng-select/ng-select';
 import { from } from 'rxjs';
+import { NgbModule, NgbPaginationModule,NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [AppComponent,
   HeaderComponent,
@@ -28,7 +29,10 @@ import { from } from 'rxjs';
     BrowserModule,
     AppRoutingModule,
      HttpClientModule,
-     NgSelectModule
+     NgSelectModule,
+     NgbModule,
+     NgbPaginationModule, 
+     NgbAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent,HeaderComponent,FooterComponent,InfovehiculoComponent,InfoaseguradoComponent,Pagina1Component,Pagina2Component]
