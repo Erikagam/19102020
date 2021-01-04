@@ -23,26 +23,62 @@ export class Pagina2Component implements OnInit {
   Ampliaplus( ) {
     // tiene selected this.statusAP
     this. ampliaplus = !this. ampliaplus;
+    this.amplia=false;
+    this.limitada=false;
+    this.basica=false;
+    this.statusA= "NoSelected";
+    this.statusL= "NoSelected";
+    this.statusB= "NoSelected";
     this.statusAP = this. ampliaplus ? "Selected"  :"NoSelected";
     console.log("Amplia Plus:"+' '+this.ampliaplus+' '+this.statusAP)
+    console.log("Amplia :"+' '+this.amplia+' '+this.statusA)
+    console.log("Limitada :"+' '+this.limitada+' '+this.statusL)
+    console.log("Básica :"+' '+this.basica+' '+this.statusB)
   }
   Amplia( ) {
     // tiene selected this.statusA
     this. amplia = !this. amplia;
+    this.ampliaplus=false;
+    this.limitada=false;
+    this.basica=false;
+    this.statusAP = "NoSelected";
+    this.statusL= "NoSelected";
+    this.statusB= "NoSelected";
     this.statusA= this. amplia ? "Selected" : "NoSelected";
     console.log("Amplia :"+' '+this.amplia+' '+this.statusA)
+    console.log("Amplia Plus:"+' '+this.ampliaplus+' '+this.statusAP)
+    console.log("Limitada :"+' '+this.limitada+' '+this.statusL)
+    console.log("Básica :"+' '+this.basica+' '+this.statusB)
   }
   Limitada( ) {
     // tiene selected this.statusL
     this. limitada = !this. limitada;
+    this.ampliaplus=false;
+    this.amplia=false;
+    this.basica=false;
+    this.statusAP = "NoSelected";
+    this.statusA= "NoSelected";
+    this.statusB= "NoSelected";
     this.statusL= this. limitada ? "Selected" : "NoSelected" ;
     console.log("Limitada :"+' '+this.limitada+' '+this.statusL)
+    console.log("Amplia Plus:"+' '+this.ampliaplus+' '+this.statusAP)
+    console.log("Amplia :"+' '+this.amplia+' '+this.statusA)
+    console.log("Básica :"+' '+this.basica+' '+this.statusB)
   }
   Basica( ) {
     // tiene selected this.statusB
     this. basica = !this. basica;
+    this.ampliaplus=false;
+    this.amplia=false;
+    this.limitada=false;
+    this.statusAP = "NoSelected";
+    this.statusA= "NoSelected";
+    this.statusL= "NoSelected";
     this.statusB= this. basica  ? "Selected" : "NoSelected" ;
     console.log("Básica :"+' '+this.basica+' '+this.statusB)
+    console.log("Amplia Plus:"+' '+this.ampliaplus+' '+this.statusAP)
+    console.log("Amplia :"+' '+this.amplia+' '+this.statusA)
+    console.log("Limitada :"+' '+this.limitada+' '+this.statusL)
   }
   //Valores botón descuento
   descALTO=false;
@@ -54,18 +90,32 @@ export class Pagina2Component implements OnInit {
   Descuentoalto( ) {
     // tiene selected this.statusDA
     this. descALTO = !this. descALTO;
+    this. descMEDIO=false
+    this.statusDM="NoSelected"
+    this. descBAJO=false
+    this.statusDB="NoSelected"
     this.statusDA = this. descALTO ? "Selected"  :"NoSelected";
     console.log("Descuento Alto:"+' '+this.descALTO+' '+this.statusDA)
+    console.log("Descuento Medio :"+' '+this.descMEDIO+' '+this.statusDM)
+    console.log("Descuento Bajo :"+' '+this.descBAJO+' '+this.statusDB)
   }
  Descuentomedio( ) {
     // tiene selected this.statusDM
     this. descMEDIO = !this. descMEDIO;
+    this.descALTO=false
+    this.statusDA="NoSelected"
+    this. descBAJO=false
+    this.statusDB="NoSelected"
     this.statusDM= this. descMEDIO ? "Selected" : "NoSelected";
     console.log("Descuento Medio :"+' '+this.descMEDIO+' '+this.statusDM)
   }
   Descuentobajo( ) {
     // tiene selected this.statusDB
     this. descBAJO = !this. descBAJO;
+    this.descALTO=false
+    this.statusDA="NoSelected"
+     this. descMEDIO=false
+     this.statusDM="NoSelected"
     this.statusDB= this. descBAJO ? "Selected" : "NoSelected" ;
     console.log("Descuento Bajo :"+' '+this.descBAJO+' '+this.statusDB)
   }
@@ -81,26 +131,63 @@ export class Pagina2Component implements OnInit {
   Mensual( ) {
     // tiene selected this.statusM
     this. mensual = !this. mensual;
+    this.trimestral=false;
+    this.semestral=false;
+    this.anual=false;
+    this.statusT= "NoSelected";
+    this.statusS= "NoSelected";
+    this.statusAn= "NoSelected";
     this.statusM = this. mensual ? "Selected"  :"NoSelected";
     console.log("Mensual:"+' '+this.mensual+' '+this.statusM)
+    console.log("Trimestral :"+' '+this.trimestral+' '+this.statusT)
+    console.log("Semestral :"+' '+this.semestral+' '+this.statusS)
+    console.log("Anual :"+' '+this.anual+' '+this.statusAn)
   }
   Trimestral( ) {
     // tiene selected this.statusT
     this. trimestral = !this. trimestral;
+    this. mensual=false;
+    this.semestral=false;
+    this.anual=false;
+    this.statusM= "NoSelected";
+    this.statusS= "NoSelected";
+    this.statusAn= "NoSelected";
     this.statusT= this. trimestral ? "Selected" : "NoSelected";
     console.log("Trimestral :"+' '+this.trimestral+' '+this.statusT)
+    console.log("Mensual:"+' '+this.mensual+' '+this.statusM)
+    console.log("Semestral :"+' '+this.semestral+' '+this.statusS)
+    console.log("Anual :"+' '+this.anual+' '+this.statusAn)
+    
   }
   Semestral( ) {
     // tiene selected this.statusS
     this. semestral = !this. semestral;
+    this.mensual=false;
+    this.trimestral=false;
+    this.anual=false;
+    this.statusM = "NoSelected";
+    this.statusT= "NoSelected";
+    this.statusAn= "NoSelected";
     this.statusS= this. semestral ? "Selected" : "NoSelected" ;
     console.log("Semestral :"+' '+this.semestral+' '+this.statusS)
+    console.log("Trimestral :"+' '+this.trimestral+' '+this.statusT)
+    console.log("Mensual:"+' '+this.mensual+' '+this.statusM)
+    console.log("Anual :"+' '+this.anual+' '+this.statusAn)
   }
   Anual( ) {
     // tiene selected this.statusAn
     this. anual = !this. anual;
+    this.mensual=false;
+    this.trimestral=false;
+    this.semestral=false;
+    this.statusM = "NoSelected";
+    this.statusT= "NoSelected";
+    this.statusS= "NoSelected";
     this.statusAn= this. anual  ? "Selected" : "NoSelected" ;
     console.log("Anual :"+' '+this.anual+' '+this.statusAn)
+    console.log("Trimestral :"+' '+this.trimestral+' '+this.statusT)
+    console.log("Mensual:"+' '+this.mensual+' '+this.statusM)
+    console.log("Semestral :"+' '+this.semestral+' '+this.statusS)
   }
   roto:number=0
   RT(event){

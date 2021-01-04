@@ -58,6 +58,11 @@
                     <ng-option  ng-options="item as item.sLlave for item.sDato in modelos">
                         {{item}}
                     </ng-option>
+                    <ng-template ng-notfound-tmp >
+                      <div class="ng-option disabled">
+                          No hay modelos que mostrar
+                      </div>
+                    </ng-template>
                   </ng-select>
                 </div>
               </div>

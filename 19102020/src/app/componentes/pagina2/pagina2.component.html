@@ -216,12 +216,16 @@
     </div> -->
     <div class="row">
         <div class="col-md-4 col-sm-12">
+            <!-- [disabled]="this.amplia || this.limitada || this.basica" -->
+            <!-- [disabled]="this.ampliaplus || this.limitada || this.basica" -->
+            <!-- [disabled]="this.amplia || this.ampliaplus || this.basica" -->
+            <!-- [disabled]="this.amplia || this.limitada || this.ampliaplus" -->
             <div class="container mw-100">
                 <div class="row" style="justify-content: center;">
                     <div class="col pr-0">
                         <div class="container mw-100">
                             <div class="row">
-                                <button id="ampl" [disabled]="this.amplia || this.limitada || this.basica" (click)="Ampliaplus()" class="btn poliza" [ngClass]="{'Noselect' : !ampliaplus, 'Select': ampliaplus}">
+                                <button id="ampl"  (click)="Ampliaplus()" class="btn poliza" [ngClass]="{'Noselect' : !ampliaplus, 'Select': ampliaplus}">
                                     <label style="display: flex; position: absolute; left: 32.917px; top: 77.467px;">                           
                                         <label id="izquierda" style="display: grid;">
                                             <svg [ngClass]="{'Noselectapll' : !ampliaplus, 'Selectapll':ampliaplus }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" style="margin-left: 16px;margin-top: 6px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
@@ -265,7 +269,7 @@
                     <div class="col px-0">
                         <div class="container mw-100">
                             <div class="row">
-                                <button [disabled]="this.ampliaplus || this.limitada || this.basica" class="btn poliza" (click)="Amplia()" [ngClass]="{'Noselect' : !amplia, 'Select': amplia }" >
+                                <button class="btn poliza" (click)="Amplia()" [ngClass]="{'Noselect' : !amplia, 'Select': amplia }" >
                                     <label style="display: flex; position: absolute; left: 32.917px; top: 77.467px;">                           
                                         <label id="izquierda" style="display: grid;">
                                             <svg [ngClass]="{'Noselectapll' : !amplia, 'Selectapll':amplia }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" style="margin-left: 16px;margin-top: 6px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
@@ -309,7 +313,7 @@
                     <div class="col px-0">
                         <div class="container mw-100">
                             <div class="row">
-                                <button [disabled]="this.amplia || this.ampliaplus || this.basica" class="btn poliza" (click)="Limitada()" [ngClass]="{'Noselect' : !limitada , 'Select': limitada }" >
+                                <button  class="btn poliza" (click)="Limitada()" [ngClass]="{'Noselect' : !limitada , 'Select': limitada }" >
                                     <label style="display: flex; position: absolute; left: 32.917px; top: 77.467px;">                           
                                         <label id="izquierda" style="display: grid;">
                                             <svg [ngClass]="{'Noselectapll' : !limitada, 'Selectapll':limitada }" fill="#d8d8d8" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 24 24" style="margin-left: 16px;margin-top: 6px;"><path d="M12 0c-4.87 7.197-8 11.699-8 16.075 0 4.378 3.579 7.925 8 7.925s8-3.547 8-7.925c0-4.376-3.13-8.878-8-16.075z"/></svg>
@@ -353,7 +357,7 @@
                     <div class="col px-0">
                         <div class="container mw-100">
                             <div class="row">
-                                <button [disabled]="this.amplia || this.limitada || this.ampliaplus" class="btn poliza" (click)="Basica()" [ngClass]="{'Noselect' : !basica, 'Select': basica }"  >
+                                <button  class="btn poliza" (click)="Basica()" [ngClass]="{'Noselect' : !basica, 'Select': basica }"  >
                                     <!--  -->
                                     <!-- [ngClass]="{'Noselect' : basica, 'Select': !basica}" -->
                                     <label>
@@ -374,12 +378,15 @@
             </div>
         </div>
         <div class="col-md-4 col-sm-12">
+            <!-- [disabled]="this.descMEDIO || this.descBAJO " -->
+            <!-- [disabled]="this.descALTO || this.descBAJO " -->
+            <!-- [disabled]="this.descALTO || this.descMEDIO " -->
             <div class="container">
                 <div class="row" style="justify-content: center;">
                     <div class="col">
                         <div class="container mw-100">
                             <div class="row">
-                                <button class="btn descuento" style="display: block;" [disabled]="this.descMEDIO || this.descBAJO " (click)=" Descuentoalto()" [ngClass]="{'Noselect' :  !descALTO, 'Select': descALTO}">
+                                <button class="btn descuento" style="display: block;"  (click)=" Descuentoalto()" [ngClass]="{'Noselect' :  !descALTO, 'Select': descALTO}">
                                     <svg  fill="#c5c5c4"  [ngClass]="{'Noselectap' : !descALTO, 'Selectap':descALTO }"  width="90" height="50" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12.628 21.412l5.969-5.97 1.458 3.71-12.34 4.848-4.808-12.238 9.721 9.65zm-1.276-21.412h-9.352v9.453l10.625 10.547 9.375-9.375-10.648-10.625zm4.025 9.476c-.415-.415-.865-.617-1.378-.617-.578 0-1.227.241-2.171.804-.682.41-1.118.584-1.456.584-.361 0-1.083-.408-.961-1.218.052-.345.25-.697.572-1.02.652-.651 1.544-.848 2.276-.106l.744-.744c-.476-.476-1.096-.792-1.761-.792-.566 0-1.125.227-1.663.677l-.626-.627-.698.699.653.652c-.569.826-.842 2.021.076 2.938 1.011 1.011 2.188.541 3.413-.232.6-.379 1.083-.563 1.475-.563.589 0 1.18.498 1.078 1.258-.052.386-.26.763-.621 1.122-.451.451-.904.679-1.347.679-.418 0-.747-.192-1.049-.462l-.739.739c.463.458 1.082.753 1.735.753.544 0 1.087-.201 1.612-.597l.54.538.697-.697-.52-.521c.743-.896 1.157-2.209.119-3.247zm-9.678-7.476c.938 0 1.699.761 1.699 1.699 0 .938-.761 1.699-1.699 1.699-.938 0-1.699-.761-1.699-1.699 0-.938.761-1.699 1.699-1.699z"/>
                                     </svg>
@@ -391,7 +398,7 @@
                     <div class="col">
                         <div class="container mw-100">
                             <div class="row">
-                                <button class="btn descuento" style="display: block;" [disabled]="this.descALTO || this.descBAJO " (click)=" Descuentomedio()" [ngClass]="{'Noselect' :  !descMEDIO, 'Select': descMEDIO}">
+                                <button class="btn descuento" style="display: block;" (click)=" Descuentomedio()" [ngClass]="{'Noselect' :  !descMEDIO, 'Select': descMEDIO}">
                                     <svg [ngClass]="{'Noselectap' : ! descMEDIO, 'Selectap':descMEDIO }" fill="#c5c5c4" width="90" height="50" viewBox="0 0 24 24" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12.628 21.412l5.969-5.97 1.458 3.71-12.34 4.848-4.808-12.238 9.721 9.65zm-1.276-21.412h-9.352v9.453l10.625 10.547 9.375-9.375-10.648-10.625zm4.025 9.476c-.415-.415-.865-.617-1.378-.617-.578 0-1.227.241-2.171.804-.682.41-1.118.584-1.456.584-.361 0-1.083-.408-.961-1.218.052-.345.25-.697.572-1.02.652-.651 1.544-.848 2.276-.106l.744-.744c-.476-.476-1.096-.792-1.761-.792-.566 0-1.125.227-1.663.677l-.626-.627-.698.699.653.652c-.569.826-.842 2.021.076 2.938 1.011 1.011 2.188.541 3.413-.232.6-.379 1.083-.563 1.475-.563.589 0 1.18.498 1.078 1.258-.052.386-.26.763-.621 1.122-.451.451-.904.679-1.347.679-.418 0-.747-.192-1.049-.462l-.739.739c.463.458 1.082.753 1.735.753.544 0 1.087-.201 1.612-.597l.54.538.697-.697-.52-.521c.743-.896 1.157-2.209.119-3.247zm-9.678-7.476c.938 0 1.699.761 1.699 1.699 0 .938-.761 1.699-1.699 1.699-.938 0-1.699-.761-1.699-1.699 0-.938.761-1.699 1.699-1.699z"/>
                                     </svg>
@@ -403,7 +410,7 @@
                     <div class="col">
                         <div class="container mw-100">
                             <div class="row">
-                                <button class="btn descuento" style="display: block;"  [disabled]="this.descALTO || this.descMEDIO " (click)=" Descuentobajo()" [ngClass]="{'Noselect' :  !descBAJO, 'Select': descBAJO}">
+                                <button class="btn descuento" style="display: block;" (click)=" Descuentobajo()" [ngClass]="{'Noselect' :  !descBAJO, 'Select': descBAJO}">
                                     <svg [ngClass]="{'Noselectap' : ! descBAJO, 'Selectap':descBAJO }" fill="#c5c5c4" width="90" height="50" viewBox="0 0 24 24" fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12.628 21.412l5.969-5.97 1.458 3.71-12.34 4.848-4.808-12.238 9.721 9.65zm-1.276-21.412h-9.352v9.453l10.625 10.547 9.375-9.375-10.648-10.625zm4.025 9.476c-.415-.415-.865-.617-1.378-.617-.578 0-1.227.241-2.171.804-.682.41-1.118.584-1.456.584-.361 0-1.083-.408-.961-1.218.052-.345.25-.697.572-1.02.652-.651 1.544-.848 2.276-.106l.744-.744c-.476-.476-1.096-.792-1.761-.792-.566 0-1.125.227-1.663.677l-.626-.627-.698.699.653.652c-.569.826-.842 2.021.076 2.938 1.011 1.011 2.188.541 3.413-.232.6-.379 1.083-.563 1.475-.563.589 0 1.18.498 1.078 1.258-.052.386-.26.763-.621 1.122-.451.451-.904.679-1.347.679-.418 0-.747-.192-1.049-.462l-.739.739c.463.458 1.082.753 1.735.753.544 0 1.087-.201 1.612-.597l.54.538.697-.697-.52-.521c.743-.896 1.157-2.209.119-3.247zm-9.678-7.476c.938 0 1.699.761 1.699 1.699 0 .938-.761 1.699-1.699 1.699-.938 0-1.699-.761-1.699-1.699 0-.938.761-1.699 1.699-1.699z"/>
                                     </svg>
@@ -416,26 +423,30 @@
             </div>
         </div>
         <div class="col-md-4 col-sm-12">
+            <!-- [disabled]="this.trimestral || this.semestral  || this.anual" -->
+            <!-- [disabled]="this.mensual || this.semestral  || this.anual" -->
+            <!-- [disabled]="this.mensual || this.trimestral  || this.anual" -->
+            <!-- [disabled]="this.mensual || this.trimestral  || this.semestral" -->
             <div class="container mw-100">
                 <div class="row" style="justify-content: center;">
                     <div class="col px-0" id="mensual">
                         <div class="container mw-100">
                             <div class="row">
-                                <button class="btn pago" style="display: block;" [disabled]="this.trimestral || this.semestral  || this.anual" (click)=" Mensual()" [ngClass]="{'Noselect' :  !mensual, 'Select': mensual}">
+                                <button class="btn pago" style="display: block;"  (click)=" Mensual()" [ngClass]="{'Noselect' :  !mensual, 'Select': mensual}">
                                 <label style="display:block">
                                         <svg id="calendar" [ngClass]="{'Noselectap' : !  mensual, 'Selectap': mensual }" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm-2 2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5 6H4v8h16v-8z"/></svg>
                                         <svg [ngClass]="{'Noselectap' : !  mensual, 'Selectap': mensual }" fill="#c5c5c4" style="margin-left: -25px;margin-top: 11px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 1.5V22h-2V3.704L7.5 4.91V2.839l5-1.339z"/></svg>    
                                         <svg id="moneda" [ngClass]="{'Noselectap' : ! mensual, 'Selectap': mensual }" fill="#c5c5c4" style="margin-top: 36px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 16.947v1.053h-1v-.998c-1.035-.018-2.106-.265-3-.727l.455-1.644c.956.371 2.229.765 3.225.54 1.149-.26 1.384-1.442.114-2.011-.931-.434-3.778-.805-3.778-3.243 0-1.363 1.039-2.583 2.984-2.85v-1.067h1v1.018c.724.019 1.536.145 2.442.42l-.362 1.647c-.768-.27-1.617-.515-2.443-.465-1.489.087-1.62 1.376-.581 1.916 1.712.805 3.944 1.402 3.944 3.547.002 1.718-1.343 2.632-3 2.864z"/></svg>
                                 </label>
                                 Mensual
-                             </button>
+                                </button>
                             </div>
                         </div>
                     </div>
                     <div class="col px-0">
                         <div class="container mw-100">
                             <div class="row">
-                              <button class="btn pago" [disabled]="this.mensual || this.semestral  || this.anual" (click)=" Trimestral()" [ngClass]="{'Noselect' :  !trimestral, 'Select': trimestral}">
+                              <button class="btn pago"  (click)=" Trimestral()" [ngClass]="{'Noselect' :  !trimestral, 'Select': trimestral}">
                                 <label style="display:block">
                                     <svg id="calendar" [ngClass]="{'Noselectap' : ! trimestral, 'Selectap': trimestral }" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm-2 2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5 6H4v8h16v-8z"/></svg>
                                     <svg [ngClass]="{'Noselectap' : !  trimestral, 'Selectap': trimestral }" fill="#c5c5c4" style="margin-left: -25px;margin-top: 11px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M18 2v1.362L12.809 9.55a6.501 6.501 0 1 1-7.116 8.028l1.94-.486A4.502 4.502 0 0 0 16.5 16a4.5 4.5 0 0 0-6.505-4.03l-.228.122-.69-1.207L14.855 4 6.5 4V2H18z"/></svg>
@@ -449,7 +460,7 @@
                     <div class="col px-0">
                         <div class="container mw-100">
                             <div class="row">
-                              <button class="btn pago" [disabled]="this.mensual || this.trimestral  || this.anual" (click)=" Semestral()" [ngClass]="{'Noselect' :  !semestral, 'Select': semestral}" >
+                              <button class="btn pago"  (click)=" Semestral()" [ngClass]="{'Noselect' :  !semestral, 'Select': semestral}" >
                                 <label style="display:block">
                                     <svg  id="calendar" [ngClass]="{'Noselectap' : ! semestral, 'Selectap': semestral }" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm-2 2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5 6H4v8h16v-8z"/></svg>
                                     <svg  [ngClass]="{'Noselectap' : ! semestral, 'Selectap': semestral }" fill="#c5c5c4" style="margin-left: -25px;margin-top: 11px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M14.886 2l-4.438 7.686A6.5 6.5 0 1 1 6.4 12.7L12.576 2h2.31zM12 11.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"/></svg>
@@ -463,7 +474,7 @@
                     <div class="col pl-0">
                         <div class="container mw-100">
                             <div class="row">
-                             <button class="btn pago"  [disabled]="this.mensual || this.trimestral  || this.semestral" (click)=" Anual()" [ngClass]="{'Noselect' :  !anual, 'Select': anual}" >
+                             <button class="btn pago"   (click)=" Anual()" [ngClass]="{'Noselect' :  !anual, 'Select': anual}" >
                                 <label style="display:block">
                                     <svg id="calendar" [ngClass]="{'Noselectap' : ! anual, 'Selectap': anual }" fill="#c5c5c4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40"><path fill="none" d="M0 0h24v24H0z"/><path d="M17 3h4a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h4V1h2v2h6V1h2v2zm-2 2H9v2H7V5H4v4h16V5h-3v2h-2V5zm5 6H4v8h16v-8z"/></svg>
                                     <svg [ngClass]="{'Noselectap' : ! anual, 'Selectap': anual }" fill="#c5c5c4" style="margin-left: -30px;margin-top: 11px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12"><path fill="none" d="M0 0h24v24H0z"/><path d="M14 1.5V22h-2V3.704L7.5 4.91V2.839l5-1.339z"/></svg>    

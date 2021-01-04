@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./infoasegurado.component.css']
 })
 export class InfoaseguradoComponent implements OnInit {
+  mu:boolean=false;
   existe:boolean; 
   existeT: boolean;
   tam:number
@@ -111,20 +112,38 @@ export class InfoaseguradoComponent implements OnInit {
   Soymujer() {
     // tiene selected this.statussoymujer
     this.soymujer = !this. soymujer;
+    this. soyhombre=false
+    this.statussoyhombre="NoSelected"
+    this.soyempresa=false
+    this.statussoyempresa="NoSelected"
     this.statussoymujer = this. soymujer ? "Selected"  :"NoSelected";
     console.log("Mujer"+' '+this.soymujer+' '+this.statussoymujer)
+    console.log("Hombre"+' '+this.soyhombre+' '+this.statussoyhombre)
+    console.log("Empresa"+' '+this.soyempresa+' '+this.statussoyempresa)
   }
   Soyhombre( ) {
     // tiene selected this.statusDM
     this. soyhombre = !this. soyhombre;
+    this. soymujer=false
+    this.statussoymujer="NoSelected"
+    this.soyempresa=false
+    this.statussoyempresa="NoSelected"
     this.statussoyhombre= this. soyhombre ? "Selected" : "NoSelected";
     console.log("Hombre"+' '+this.soyhombre+' '+this.statussoyhombre)
+    console.log("Mujer"+' '+this.soymujer+' '+this.statussoymujer)
+    console.log("Empresa"+' '+this.soyempresa+' '+this.statussoyempresa)
   }
   Soyempresa( ) {
     // tiene selected this.statusDB
     this. soyempresa = !this. soyempresa;
+    this. soymujer=false
+    this.statussoymujer="NoSelected"
+    this.soyhombre=false
+    this.statussoyhombre="NoSelected"
     this.statussoyempresa= this. soyempresa ? "Selected" : "NoSelected" ;
     console.log("Empresa"+' '+this.soyempresa+' '+this.statussoyempresa)
+    console.log("Hombre"+' '+this.soyhombre+' '+this.statussoyhombre)
+    console.log("Mujer"+' '+this.soymujer+' '+this.statussoymujer)
   }
   // Funciones con DD
   // capturarmes(evento) {
@@ -163,17 +182,14 @@ export class InfoaseguradoComponent implements OnInit {
   
   //Funciones selección fecha de nacimiento
   getmes(){
-    // Limpia día
-    this.selecteddia=""
-    this.verdia=""
     console.log(this.selectedmes)
     this.vermes=this.selectedmes
     this.calculabis()
   }
   getanno(){
     // Limpia
-    this.selecteddia=""
-    this.verdia=""
+    // this.selecteddia=""
+    // this.verdia=""
     console.log(this.selectedyear)
     this.verfechaann=this.selectedyear
     this.calculabis() 
@@ -223,6 +239,7 @@ export class InfoaseguradoComponent implements OnInit {
   
 //Función para determinar tipo de año (bisiesto/ no bisiesto)
   calculabis() {
+    this.dias=[]
     if (this.verfechaann!='' && this.vermes!='') {
       var numerican = Number(this.verfechaann);
       console.log(this.verfechaann+' ' + this.vermes)
@@ -241,16 +258,22 @@ export class InfoaseguradoComponent implements OnInit {
         }
       }
     } else {
-      if (this.bisiesto) {
+      if (!this.bisiesto) {
         console.log(numerican +' '+"NO BISIESTO")
       for (let index = 0; this.mesdia.length; index++) {
-        if (this.mesdia[index][0]===this.vermes) {
+        if (this.mesdia[index][0]==this.vermes) {
           var hastaaqui = Number(this.mesdia[index][1]);
           console.log(this.mesdia[index][1])
           console.log( hastaaqui+' '+ this.vermes)
           for (let index = 1 ; index <= hastaaqui; index++) {
             this.dias.push(index)
           }
+          if (!this.bisiesto && this.selecteddia==29 && this.selectedmes=='Febrero') {
+            // Limpia día
+           this.selecteddia=""
+           this.verdia=""
+           this.mu=false
+         }
         }
       }
       }
