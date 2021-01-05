@@ -11,6 +11,17 @@ export class InfoaseguradoComponent implements OnInit {
   @Output() pasad = new EventEmitter<string>();
   @Output() pasam = new EventEmitter<string>();
   @Output() pasay = new EventEmitter<string>();
+  @Output() pastel = new EventEmitter<string>();
+  @Output() pasnom = new EventEmitter<string>();
+  @Output() pasemail = new EventEmitter<string>();
+  @Output() pascp = new EventEmitter<string>();
+  @Output() pasgen = new EventEmitter<string>();
+  
+  
+ modsel:string='';
+ marsel:string='';
+descsel:string='';
+annosel:string='';
 
   existe:boolean; 
   existeT: boolean;
@@ -109,9 +120,9 @@ export class InfoaseguradoComponent implements OnInit {
   statussoyempresa= "NoSelected";
   constructor(private http:HttpClient){
   }
-   
+ 
 //Funciones botones SOY
-  Soymujer() {
+  Soymujer() { 
     // tiene selected this.statussoymujer
     this.soymujer = !this. soymujer;
     this. soyhombre=false
@@ -119,11 +130,16 @@ export class InfoaseguradoComponent implements OnInit {
     this.soyempresa=false
     this.statussoyempresa="NoSelected"
     this.statussoymujer = this. soymujer ? "Selected"  :"NoSelected";
+    this.pasgen.emit('Mujer')
     console.log("Mujer"+' '+this.soymujer+' '+this.statussoymujer)
     console.log("Hombre"+' '+this.soyhombre+' '+this.statussoyhombre)
     console.log("Empresa"+' '+this.soyempresa+' '+this.statussoyempresa)
+    //SINO HAY GENERO SELECCIONADO
+    if (!this.soyhombre&& !this.soymujer && !this.soyempresa) {
+      this.pasgen.emit('')  
+    }
   }
-  Soyhombre( ) {
+  Soyhombre() {
     // tiene selected this.statusDM
     this. soyhombre = !this. soyhombre;
     this. soymujer=false
@@ -131,11 +147,16 @@ export class InfoaseguradoComponent implements OnInit {
     this.soyempresa=false
     this.statussoyempresa="NoSelected"
     this.statussoyhombre= this. soyhombre ? "Selected" : "NoSelected";
+    this.pasgen.emit('Hombre')
     console.log("Hombre"+' '+this.soyhombre+' '+this.statussoyhombre)
     console.log("Mujer"+' '+this.soymujer+' '+this.statussoymujer)
     console.log("Empresa"+' '+this.soyempresa+' '+this.statussoyempresa)
+    //SINO HAY GENERO SELECCIONADO
+    if (!this.soyhombre&& !this.soymujer && !this.soyempresa) {
+      this.pasgen.emit('')  
+    }
   }
-  Soyempresa( ) {
+  Soyempresa() {
     // tiene selected this.statusDB
     this. soyempresa = !this. soyempresa;
     this. soymujer=false
@@ -143,45 +164,15 @@ export class InfoaseguradoComponent implements OnInit {
     this.soyhombre=false
     this.statussoyhombre="NoSelected"
     this.statussoyempresa= this. soyempresa ? "Selected" : "NoSelected" ;
+    this.pasgen.emit('Empresa')
     console.log("Empresa"+' '+this.soyempresa+' '+this.statussoyempresa)
     console.log("Hombre"+' '+this.soyhombre+' '+this.statussoyhombre)
     console.log("Mujer"+' '+this.soymujer+' '+this.statussoymujer)
+    //SINO HAY GENERO SELECCIONADO
+    if (!this.soyhombre&& !this.soymujer && !this.soyempresa) {
+      this.pasgen.emit('')  
+    }
   }
-  // Funciones con DD
-  // capturarmes(evento) {
-  //   // ng-model="selectedItem" ng-options="item as item.name for item in items"
-  //   this.dias=[]
-  //   this.verdia=""
-  //   this.dia=""
-  //   document.getElementById("btndia").textContent = "Día";
-  //   // console.log(evento.target.textContent)
-  //   console.log(this.selected[0])
-  //   this.vermes=evento.target.textContent
-  //   this.vermes=this.vermes.replace(/ /g,"")
-  //   this.mes=evento.target.value
-  //   document.getElementById("btnmes").textContent = this.vermes;
-  //   this.calculabis()
-  // }
-  // capturarfechaann(evento) {
-  //   // console.log(evento.target.textContent)
-  //   //siguientes 3 lineas limpian la seleccion anterior
-  //   this.dias=[]
-  //   this.verdia=""
-  //   this.dia=""
-  //   document.getElementById("btndia").textContent = "Día";
-  //   this.verfechaann=evento.target.textContent
-  //   this.verfechaann=this.verfechaann.replace(/ /g,"")
-  //   this.fechaann=evento.target.value
-  //   document.getElementById("btnnacann").textContent = this.verfechaann;
-  //   this.calculabis()
-  //   }
-  // capturardia(evento) {
-  //   this.verdia=evento.target.textContent
-  //   this.verdia=this.verdia.replace(/ /g,"")
-  //   this.dia=evento.target.value
-  //   document.getElementById("btndia").textContent = this.verdia;
-  // }
-  
   //Funciones selección fecha de nacimiento
   getmes(){
     console.log(this.selectedmes)
@@ -241,10 +232,8 @@ export class InfoaseguradoComponent implements OnInit {
           }
     }
   }
-  
 //Función para determinar tipo de año (bisiesto/ no bisiesto)
   calculabis() {
-   
     this.dias=[]
     if (this.verfechaann!='' && this.vermes!='') {
       var numerican = Number(this.verfechaann);
@@ -254,7 +243,7 @@ export class InfoaseguradoComponent implements OnInit {
     if (this.bisiesto) {
       console.log(numerican  +' '+"BISIESTO")
       this.dias=[];
-      for (let index = 0; index < 12; index++) {
+      for (let index = 0; this.mesdiabis.length; index++) {
         if (this.mesdiabis[index][0]==this.vermes) {
           var hastaaquibi = Number(this.mesdiabis[index][1]);
           console.log( hastaaquibi +' '+ this.vermes)
@@ -278,6 +267,8 @@ export class InfoaseguradoComponent implements OnInit {
             // Limpia día
            this.selecteddia=""
            this.verdia=""
+            this.pasad.emit('')
+
          }
         }
       }
@@ -288,22 +279,25 @@ export class InfoaseguradoComponent implements OnInit {
     }
   }
   //Función teléfono
-  onTelefono(event) {
+  onTelefono(event){
     console.log(event);
     if (this.TELEFONO.length < 10 || this.TELEFONO=='') {
       if (this.TELEFONO.length>=1 && this.TELEFONO.length <10) {
         this.existeT=false
         console.log('No se puede validar un teléfono menor a 10 caracteres');
+        this.pastel.emit('')
         return;
       } else {
         if (this.TELEFONO=='') {
           this.existeT=false
           console.log('No se puede validar un teléfono vacío');
+          this.pastel.emit('')
           return;
         }  
       }
     }else{
       if (this.TELEFONO.length==10 && this.TELEFONO!='') {
+        this.pastel.emit(this.TELEFONO)
         this.existeT=true;
       }
     }
@@ -314,11 +308,13 @@ export class InfoaseguradoComponent implements OnInit {
     console.log(event);
     if (this.codigoPostal.length < 5 && this.codigoPostal!='') {
       this.existe=false
+      this.pascp.emit('')
       console.log('No se puede validar un CP menor a 5 caracteres');
       return;
     }
     if(this.codigoPostal=='') {
       this.existe=false
+      this.pascp.emit('')
       console.log('No se puede validar un CP vacío');
       return;
     }
@@ -330,10 +326,12 @@ export class InfoaseguradoComponent implements OnInit {
       // console.log(data.CatalogoJsonString)
       if (data.Error != null) {
         this.existe=false
+        this.pascp.emit('')
         console.log("No existe")
         return;
       } else {
         this.existe=true
+        this.pascp.emit(this.codigoPostal)
         this.ubicacion = JSON.parse(data.CatalogoJsonString);
         this.estado = this.ubicacion[0].Municipio.Estado.sEstado;
         this.municipio = this.ubicacion[0].Municipio.sMunicipio;
@@ -350,9 +348,11 @@ export class InfoaseguradoComponent implements OnInit {
     console.log(this.EMAIL)
     if (this.EMAIL=='') {
       this.vacemial=false
+      this.pasemail.emit('')
     } else {
       if (this.EMAIL!='') {
         this.vacemial=true
+        this.pasemail.emit(this.EMAIL)
       }
     }
   }
@@ -362,9 +362,11 @@ export class InfoaseguradoComponent implements OnInit {
   console.log(this.NOMBRE)
   if (this.NOMBRE=='') {
     this.vacnom=false
+    this.pasnom.emit('')
   } else {
     if (this.NOMBRE!='') {
       this.vacnom=true
+      this.pasnom.emit(this.NOMBRE)
     }
   }
 }

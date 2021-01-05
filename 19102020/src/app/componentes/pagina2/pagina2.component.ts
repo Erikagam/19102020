@@ -9,7 +9,6 @@ import {Pagina1Component } from  'src/app/componentes/pagina1/pagina1.component'
   styleUrls: ['./pagina2.component.css']
 })
 export class Pagina2Component implements OnInit {
-  @ViewChild(Pagina1Component) child1;
   //Valores botón tipo de cobertura
   ampliaplus=false;
   amplia=false;
@@ -19,10 +18,20 @@ export class Pagina2Component implements OnInit {
   statusA= "NoSelected";
   statusL= "NoSelected";
   statusB= "NoSelected";
+  //Variables a las que asigno datos de pagina1 
   vermodelo: any;
   vermarca: any;
   verdescripcion: any;
   veranno: any;
+  nombre: any;
+  email: any;
+  telefono: any;
+  genero: any;
+  codigopostal: any;
+  mesnaci: any;
+  yearnaci: any;
+  dianaci: any;
+  //Funciones cobertura
   Ampliaplus( ) {
     // tiene selected this.statusAP
     this. ampliaplus = !this. ampliaplus;
@@ -90,6 +99,7 @@ export class Pagina2Component implements OnInit {
   statusDA = "NoSelected";
   statusDM= "NoSelected";
   statusDB= "NoSelected";
+  //Funciones descuento
   Descuentoalto( ) {
     // tiene selected this.statusDA
     this. descALTO = !this. descALTO;
@@ -131,6 +141,7 @@ export class Pagina2Component implements OnInit {
   statusT= "NoSelected";
   statusS= "NoSelected";
   statusAn= "NoSelected";
+  //Funciones pago
   Mensual( ) {
     // tiene selected this.statusM
     this. mensual = !this. mensual;
@@ -249,11 +260,18 @@ muacco:number=0
    }
 
   ngOnInit(): void {
-    this.vermodelo=history.state.modelo
-    this.vermarca=history.state.marca
-    this.verdescripcion=history.state.descripcion
-    this.veranno=history.state.anno
-    
+    this.vermodelo=history.state.modsel
+    this.vermarca=history.state.marsel 
+    this.verdescripcion=history.state.descsel 
+    this.veranno=history.state.annosel
+    this.nombre=history.state.nomsel
+    this.email=history.state.emsel
+    this.telefono=history.state.telsel
+    this.genero=history.state.gensel
+    this.codigopostal=history.state.cpsel
+    this.mesnaci=history.state.smsel
+    this.yearnaci=history.state.sysel
+    this.dianaci=history.state.sdsel
   }
 
 

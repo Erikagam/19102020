@@ -7,17 +7,21 @@ import { Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class Pagina1Component implements OnInit {
 
- 
-  // @Output() mandaapag2 = new EventEmitter<{sm:any, sy:any, sd: any ,modelo:any,marca:any,descrpcion:any,anno:any}>(); 
+  //variabbles datos asegurado
+    nombre:string='';
+    email:string='';
+    telefono:string='';
+    genero:string='';
+    cp:string='';
   //Variables fecha de nacimiento
-    sm:String='';
-    sy:String='';
-    sd:String='';
+    sm:string='';
+    sy:string='';
+    sd:string='';
   //Variables carro
-    modelo:String='';
-    marca:String='';
-    descripcion:String='';
-    anno:String='';
+    modelo:string='';
+    marca:string='';
+    descripcion:string='';
+    anno:string='';
 
   a(e) {
     console.log(e);
@@ -47,7 +51,29 @@ export class Pagina1Component implements OnInit {
     console.log(e);
     this.sy=e
   }
+   i(e){
+      console.log(e)
+      this.telefono=e
+   }
    
+   j(e){
+    console.log(e)
+    this.nombre=e
+ }
+ 
+ k(e){
+  console.log(e)
+  this.cp=e
+}
+l(e){
+  console.log(e)
+  this.email=e
+}
+
+m(e){
+  console.log(e)
+  this.genero=e
+}
   constructor() { }
 
   ngOnInit(): void {
