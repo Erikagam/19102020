@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output  } from '@angular/core';
 import { disableDebugTools } from '@angular/platform-browser';
 import {HttpClient} from '@angular/common/http'
-
 
 @Component({
   selector: 'app-infoasegurado',
@@ -9,7 +8,10 @@ import {HttpClient} from '@angular/common/http'
   styleUrls: ['./infoasegurado.component.css']
 })
 export class InfoaseguradoComponent implements OnInit {
-  mu:boolean=false;
+  @Output() pasad = new EventEmitter<string>();
+  @Output() pasam = new EventEmitter<string>();
+  @Output() pasay = new EventEmitter<string>();
+
   existe:boolean; 
   existeT: boolean;
   tam:number
@@ -184,6 +186,7 @@ export class InfoaseguradoComponent implements OnInit {
   getmes(){
     console.log(this.selectedmes)
     this.vermes=this.selectedmes
+    this.pasam.emit(this.vermes)
     this.calculabis()
   }
   getanno(){
@@ -192,11 +195,13 @@ export class InfoaseguradoComponent implements OnInit {
     // this.verdia=""
     console.log(this.selectedyear)
     this.verfechaann=this.selectedyear
+    this.pasay.emit(this.verfechaann)
     this.calculabis() 
   }
   getdia(){
     console.log(this.selecteddia)
     this.verdia=this.selecteddia
+    this.pasad.emit(this.verdia)
     var num= parseInt(this.selecteddia, 10)     
     if (num==28) {
       console.log(" 1 if 28")
@@ -239,6 +244,7 @@ export class InfoaseguradoComponent implements OnInit {
   
 //Función para determinar tipo de año (bisiesto/ no bisiesto)
   calculabis() {
+   
     this.dias=[]
     if (this.verfechaann!='' && this.vermes!='') {
       var numerican = Number(this.verfechaann);
@@ -272,7 +278,6 @@ export class InfoaseguradoComponent implements OnInit {
             // Limpia día
            this.selecteddia=""
            this.verdia=""
-           this.mu=false
          }
         }
       }
@@ -363,6 +368,8 @@ export class InfoaseguradoComponent implements OnInit {
     }
   }
 }
+
+
   }
 
   

@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgModule } from "@angular/core";
 import { ActivatedRoute } from '@angular/router';
+import {Pagina1Component } from  'src/app/componentes/pagina1/pagina1.component'
+
 @Component({
   selector: 'app-pagina2',
   templateUrl: './pagina2.component.html',
   styleUrls: ['./pagina2.component.css']
 })
 export class Pagina2Component implements OnInit {
+  @ViewChild(Pagina1Component) child1;
   //Valores botón tipo de cobertura
   ampliaplus=false;
   amplia=false;

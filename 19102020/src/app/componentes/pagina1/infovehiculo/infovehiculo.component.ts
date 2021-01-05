@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output} from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 
-//  para añadir script import * as $ from 'jquery'; 
 
+//  para añadir script import * as $ from 'jquery'; 
 
 @Component({
   selector: 'app-infovehiculo',
@@ -14,7 +14,12 @@ export class InfovehiculoComponent implements OnInit {
   readonly api: string ="https://apitestcotizamatico.azurewebsites.net/api/catalogoCotizamaticoBr";
   constructor(private http:HttpClient){
   }
-  
+  @Output() gM = new EventEmitter<string>();
+  @Output() gA = new EventEmitter<string>();
+  @Output() gMarca = new EventEmitter<string>();
+  @Output() gDesc = new EventEmitter<string>();
+ 
+ 
   annos: {sLlave: string; sDato: string; }[];
   modelos: { sLlave: number; sDato: string; }[];
   marcas: { sLlave: number; sDato: string; }[];
@@ -24,8 +29,6 @@ export class InfovehiculoComponent implements OnInit {
   marcasel;
   descripsel;
   item:string='';
-  
-  
   modelo: string  = '0'; // Iniciamos
   vermodelo: string        = '';
   anno: string  = '0'; // Iniciamos
@@ -34,90 +37,9 @@ export class InfovehiculoComponent implements OnInit {
   vermarca: string        = '';
   descripcion: string  = '0'; // Iniciamos
   verdescripcion: string       = '';
-  //DD
-  //   seleccionaModelo(evento){
-    //     //siguientes 12 lineas limpian la seleccion anterior
-//     this.annos=[]
-//     this.marcas=[]
-//     this.descripciones=[]
-//     this.anno=""
-//     this.veranno=""
-//     document.getElementById("btnyear").textContent = "Año";
-//     this.marca=""
-//     this.vermarca=""
-//     document.getElementById("btnmarca").textContent = "Marca";
-//     this.descripcion=""
-//     this.verdescripcion=""
-//     document.getElementById("btndescr").textContent = "Descripción";
-//     console.log(evento.target.textContent+'   '+evento.target.attributes[3].value )
-//     this.modelo=evento.target.attributes[3].value
-//     this.vermodelo=evento.target.textContent
-//     document.getElementById("btnmodelo").textContent = this.vermodelo;
-//         this.http.post(this.api, {
-//           "iTipoCatalogo": "20",
-//           "iModelo": "00",
-//           "iMarca": "0",
-//           "iSubramo": this.modelo,
-//           "sDescripcion": ""
-//         }).subscribe((data: any)=> {
-//           console.log(data.catalogos)
-//           this.annos=data.catalogos
-//         })
-// }
-  // seleccionaAnn(evento){
-  //       //siguientes 8 lineas limpian la seleccion anterior
-  //       this.marcas=[]
-  //       this.descripciones=[]
-  //       this.marca=""
-  //       this.vermarca=""
-  //       document.getElementById("btnmarca").textContent = "Marca";
-  //       this.descripcion=""
-  //       this.verdescripcion=""
-  //       document.getElementById("btndescr").textContent = "Descripción";
-  //   console.log(evento.target.textContent + '  ' +evento.target.attributes[3].value)
-  //   this.anno=evento.target.attributes[3].value
-  //   this.veranno=evento.target.textContent
-  //   document.getElementById("btnyear").textContent = this.veranno;
-  //   this.http.post(this.api, {
-  //     "iTipoCatalogo": "30",
-  //     "iModelo": this.anno,
-  //     "iMarca": "0",
-  //     "iSubramo": this.modelo,
-  //     "sDescripcion": ""
-  //   }).subscribe((data: any)=> {
-  //     console.log(data.catalogos)
-  //     this.marcas=data.catalogos
-  //     })
-  // }
-  // seleccionaMarca(evento){
-  //   //siguientes 5 lineas limpian la seleccion anterior
-  //   this.descripciones=[]
-  //   this.descripcion=""
-  //   this.verdescripcion=""
-  //   document.getElementById("btndescr").textContent = "Descripción";
-  //   console.log(evento.target.textContent+'  '+evento.target.attributes[3].value)
-  //   this.marca=evento.target.attributes[3].value
-  //   this.vermarca=evento.target.textContent
-  //   document.getElementById("btnmarca").textContent = this.vermarca;
-  //   this.http.post(this.api, {
-  //     "iTipoCatalogo": "40",
-  //     "iModelo": this.anno,
-  //     "iMarca": this.marca,
-  //     "iSubramo": this.modelo,
-  //     "sDescripcion": ""
-  //   }).subscribe((data: any)=> {
-  //     console.log(data.catalogos)
-  //     this.descripciones=data.catalogos
-  //     })
-  // }
-  // seleccionaDescip(evento){
-  //   console.log(evento.target.textContent+'    '+evento.target.attributes[3].value)
-  //   this.descripcion=evento.target.attributes[3].value
-  //   this.verdescripcion=evento.target.textContent
-  //   document.getElementById("btndescr").textContent = this.verdescripcion;
-  // }
-  
-  getModelo() {
+ 
+getModelo( ) {
+   
       // Limpia los select restantes
       this.annos=[]
       this.annosel=''
@@ -135,6 +57,7 @@ export class InfovehiculoComponent implements OnInit {
       console.log(this.modelosel.sDato+'  '+this.modelosel.sLlave)
       this.modelo=this.modelosel.sLlave
       this.vermodelo= this.modelosel.sDato
+      this.gM.emit(this.vermodelo)
       //API
       this.http.post(this.api, {
         "iTipoCatalogo": "20",
@@ -161,6 +84,7 @@ export class InfovehiculoComponent implements OnInit {
     console.log(this.annosel.sDato+'  '+this.annosel.sLlave)
     this.anno=this.annosel.sLlave
     this.veranno= this.annosel.sDato
+    this.gA.emit(this.veranno)
     //API
     this.http.post(this.api, {
         "iTipoCatalogo": "30",
@@ -184,6 +108,8 @@ export class InfovehiculoComponent implements OnInit {
     console.log(this.marcasel.sDato+'  '+this.marcasel.sLlave)
     this.marca=this.marcasel.sLlave
     this.vermarca= this.marcasel.sDato
+    this.gMarca.emit(this.vermarca)
+
     // API
     this.http.post(this.api, {
       "iTipoCatalogo": "40",
@@ -208,6 +134,8 @@ export class InfovehiculoComponent implements OnInit {
     console.log(this.descripsel.sDato+'  '+this.descripsel.sLlave)
     this.descripcion=this.descripsel.sLlave
     this.verdescripcion= this.descripsel.sDato
+    this.gDesc.emit(this.verdescripcion)
+
   }  
   getmodels(){
       this.http.post(this.api, {
@@ -239,5 +167,6 @@ export class InfovehiculoComponent implements OnInit {
     }
   ngOnInit(): void {
     this.getmodels()
+    
   }
 }

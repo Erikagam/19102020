@@ -79,23 +79,7 @@
 .mrtop{
   margin-top: 4.5rem;;
   }
-  #coti{
-    /* font-family: 'Exo 2', sans-serif;
-     */
-    background: -webkit-linear-gradient(#FF8F48,#FF6963);
-    font: 300;
-    font-size: 40px;
-    border-style: none;
-    border-radius: 40px;
-    /* -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent; */
-}
-#ahora{
-  font: 300;
-    font-size: 40px;
-    font-weight: bold;
-}
+
 @media (max-width: 576px) {
   button.btn.btn-primary.btn-lg#coti{
         font-size: 20px!important;
