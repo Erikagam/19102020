@@ -53,6 +53,10 @@ getModelo( ) {
       this.descripsel=''
       this.verdescripcion=''
       this.descripcion=''
+      //Limpia el emisor
+      this.gA.emit('')
+      this.gMarca.emit('')
+      this.gDesc.emit('')
       // Muestra modelo Seleccinonado
       console.log(this.modelosel.sDato+'  '+this.modelosel.sLlave)
       this.modelo=this.modelosel.sLlave
@@ -80,6 +84,9 @@ getModelo( ) {
     this.descripsel=''
     this.verdescripcion=''
     this.descripcion=''
+     //Limpia el emisor
+     this.gMarca.emit('')
+     this.gDesc.emit('')
     // Muestra año Seleccinonado
     console.log(this.annosel.sDato+'  '+this.annosel.sLlave)
     this.anno=this.annosel.sLlave
@@ -104,6 +111,8 @@ getModelo( ) {
     this.descripsel=''
     this.verdescripcion=''
     this.descripcion=''
+     //Limpia el emisor
+     this.gDesc.emit('')
     // Muestra marca seleccionada
     console.log(this.marcasel.sDato+'  '+this.marcasel.sLlave)
     this.marca=this.marcasel.sLlave
