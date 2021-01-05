@@ -205,7 +205,7 @@ annosel:string='';
     } else {
       if (num==29) {
         console.log("2 if 29")
-        this.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']
+        this.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
         if (this.selecteddia!='' && this.verdia!='' && this.verfechaann!='' && this.selectedyear!='') {
           this.calculabis()
         } else {
@@ -214,7 +214,7 @@ annosel:string='';
         } else {
             if (num==30 ) {
               console.log("3 if 30")
-              this.meses=['Enero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']
+              this.meses=['Enero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
               this.calculabis()
             }else {
               if (num==31) {
@@ -224,7 +224,7 @@ annosel:string='';
                  
               }  else {
                   console.log("5 if < 28")
-                  this.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre',' Noviembre','Diciembre']  
+                  this.meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']  
               this.calculabis()
 
               }
@@ -243,7 +243,7 @@ annosel:string='';
     if (this.bisiesto) {
       console.log(numerican  +' '+"BISIESTO")
       this.dias=[];
-      for (let index = 0; this.mesdiabis.length; index++) {
+      for (let index = 0;  index<this.mesdiabis.length; index++) {
         if (this.mesdiabis[index][0]==this.vermes) {
           var hastaaquibi = Number(this.mesdiabis[index][1]);
           console.log( hastaaquibi +' '+ this.vermes)
@@ -255,7 +255,7 @@ annosel:string='';
     } else {
       if (!this.bisiesto) {
         console.log(numerican +' '+"NO BISIESTO")
-      for (let index = 0; this.mesdia.length; index++) {
+      for (let index = 0; index<this.mesdia.length; index++) {
         if (this.mesdia[index][0]==this.vermes) {
           var hastaaqui = Number(this.mesdia[index][1]);
           console.log(this.mesdia[index][1])
