@@ -27,6 +27,33 @@
 #gmm{
     display: inline-flex;
 }
+#gmm1{
+    margin-top: 38px;
+    margin-left: -72px;
+}
+#gmm2{
+    margin-left: 140px;
+    margin-top: -239px;
+    margin-top: 36px;
+}
+#v1{
+    margin-right: -17px;
+    margin-top: 46px;
+}
+#v2{
+    margin-top: 46px;
+}
+#v3{
+    padding-top: 6px;
+    margin-left: -13px;
+    margin-top: 47px;
+}
+#vi{
+    margin-top: 47px;
+}
+#h{
+    margin-top: 46px;
+}
 .card-img-overlay > .card-text{
     font-family: 'Montserrat', sans-serif;
     font: 700;
