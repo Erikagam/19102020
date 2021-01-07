@@ -195,6 +195,88 @@ border-style: solid;
 
 
 @media (max-width: 576px) {
+  #labeiz{
+    margin-left: -5px;
+  }
+  #l1{
+    left: 7.917px!important;
+    top: 86px!important;
+  }
+  #l2{
+    margin-left: -23px!important;
+    margin-top: 3px!important;
+    margin-bottom: -3px!important;
+  }
+  #l3{
+    position: relative!important;
+    left: -34px!important;
+    top: 13px!important;
+    right: 0px!important;
+  }
+  #mueve13{
+    left: 14.917px!important;
+    top: 62px!important;
+  }
+  #mueve12{
+    top: 63px!important;
+    left: 52.917px!important;
+  }
+  #mueve11{
+    left: 39.917px!important;
+    top: 53px!important;
+  }
+  #mueve10{
+    left: 46.917px!important;
+    top: 95px!important;
+  }
+  #mueve9{
+    margin-left: -40px!important;
+    margin-top: -70px!important;
+  }
+  #antesaiz{
+    left: 4.917px!important;
+    top: 80.467px!important;
+  }
+  #antesiz{
+    left: 3.917px!important;
+     top: 52.467px!important;
+  }
+  #mueve{
+    margin-top: -7px!important;
+    margin-left: -32px!important;
+  }
+  #mueve2{
+    margin-left: -21px!important;
+    margin-top: 27px!important;
+  }
+  #mueve3{
+    margin-top: -164px!important;
+    margin-bottom: 2.5rem!important;
+    margin-left: 0px!important;
+  }
+  #mueve4{
+    left: 49.917px!important;
+    top: 75px!important;
+  }
+  #mueve5{
+    left: 14.917px!important;
+  }
+  #mueve6{
+    top: 94px!important;
+    left: 35.917px!important;
+  }
+  #mueve7{
+    margin-top: 108px!important;
+margin-left: -23px!important;
+  }
+  #mueve8{
+    margin-left: -23px!important;
+    margin-top: 88px!important;
+  }
+  #renglon1{
+    top: 55.467px!important;
+    left: 47.917px!important;
+  }
   .Noselect {
     height: 144px;
     width: 63px;
