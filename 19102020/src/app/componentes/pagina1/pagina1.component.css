@@ -34,3 +34,13 @@
    font-size: 40px;
    font-weight: bold;
 }
+@media (max-width: 576px) {
+#coti{
+   font-size: 19px!important;
+   width: max-content!important;
+   height: max-content!important;
+}
+#ahora{
+   font-size: 25px!important;
+}
+}
