@@ -59,9 +59,29 @@
     font: 700;
     font-weight: bold;
 }
-@media (max-width: 576px) { 
+p#chikis{
+    margin-bottom: 0px!important;
+}
+@media (max-width: 576px) {
+    img.m-1{
+        height: 28%!important;
+        width: 28%!important;
+        margin-left: -38px !important;
+    }
+    a.avisos#chikis{
+        font-size: 28%!important;
+    }
+    img#logosymantec {
+        width: 63%!important;
+        height: 50% !important;
+        margin-left: -8px!important;
+    } 
+    img#FooterAarcoLogo{
+        width: 37%!important;
+        height: 50% !important;
+    }
     #chikis{
-        font-size: 46%!important;
+        font-size: 30%!important;
     }
     .card{
       flex: 0 0 25%;
