@@ -60,6 +60,9 @@
     font-weight: bold;
 }
 @media (max-width: 576px) { 
+    #chikis{
+        font-size: 46%!important;
+    }
     .card{
       flex: 0 0 25%;
         max-width: 25%;
