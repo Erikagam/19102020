@@ -61,6 +61,7 @@
 }
 p#chikis{
     margin-bottom: 0px!important;
+    font-size: 1.3vh !important;
 }
 @media (max-width: 576px) {
     img.m-1{
@@ -80,8 +81,8 @@ p#chikis{
         width: 37%!important;
         height: 50% !important;
     }
-    #chikis{
-        font-size: 30%!important;
+    p#chikis{
+        font-size: 0.7vh !important;
     }
     .card{
       flex: 0 0 25%;
