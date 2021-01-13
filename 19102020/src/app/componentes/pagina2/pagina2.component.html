@@ -221,6 +221,9 @@
             <!-- [disabled]="this.amplia || this.ampliaplus || this.basica" -->
             <!-- [disabled]="this.amplia || this.limitada || this.ampliaplus" -->
             <div class="container mw-100">
+                <div class="row" id="titboto">
+                    TIPO DE PÓLIZA
+                </div>
                 <div class="row" style="justify-content: center;">
                     <div class="col pr-0">
                         <div class="container mw-100">
@@ -382,6 +385,9 @@
             <!-- [disabled]="this.descALTO || this.descBAJO " -->
             <!-- [disabled]="this.descALTO || this.descMEDIO " -->
             <div class="container">
+                <div class="row" id="titboto">
+                    DESCUENTO
+                </div>
                 <div class="row" style="justify-content: center;">
                     <div class="col">
                         <div class="container mw-100">
@@ -428,6 +434,9 @@
             <!-- [disabled]="this.mensual || this.trimestral  || this.anual" -->
             <!-- [disabled]="this.mensual || this.trimestral  || this.semestral" -->
             <div class="container mw-100">
+                <div class="row" id="titboto">
+                    FORMA DE PAGO
+                </div>
                 <div class="row" style="justify-content: center;">
                     <div class="col px-0" id="mensual">
                         <div class="container mw-100">
@@ -537,25 +546,30 @@
                             <img src="../assets/images/Logo+Qualitas+Pagina-01.png" class="card-img-top" >
                         </div>
                         <div class="col-md-3 col-sm-3">
+                           <div class="container mw-100">
                             <div class="row" id="oferta">Oferta</div>
                             <div class="row" id="letrasgrad">Cotizamático</div>
                             <div class="row" id="fivth">$5000</div>
+                           </div>
                         </div>
                         <div class="col-md-3 col-sm-3">
-                            <div class="row">
-                                Precio regular $6,000
-                            </div>
-                            <div class="row">
-                                Primer pago: $1,000
-                            </div>
-                            <div class="row">
-                                3 pagos de $1,000.000 
-                            </div>
-                            <div class="row" id="tan">
-                                TOTAL ANUAL: $1,000.000 
+                            <div class="container mw-100">
+                                <div class="row">
+                                    Precio regular $6,000
+                                </div>
+                                <div class="row">
+                                    Primer pago: $1,000
+                                </div>
+                                <div class="row">
+                                    3 pagos de $1,000.000 
+                                </div>
+                                <div class="row" id="tan">
+                                    TOTAL ANUAL: $1,000.000 
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3">
+                           <div class="container mw-100">
                             <div class="row">
                                 <button class="btn" id="btnconaho">
                                     Contratar ahora
@@ -564,6 +578,7 @@
                             <div class="row">
                                 Esta cotización es válida por quince días.
                             </div>
+                           </div>
                         </div>
                       </div>
                   </li>
@@ -620,7 +635,7 @@
                                     Un servicio adicional de grúa
                                 </div>
                                 <div  class="row">
-                                    <button class="btn btn-primary" style="background-color: #21c7ed; border-color: #21c7ed; margin-top: 14px;">
+                                    <button class="btn btn-primary" style="background-color: #21c7ed; border-color: #21c7ed; margin-top: 14px;border-radius: 10px;">
                                         Mejorar precio
                                     </button>
                                 </div>
@@ -641,7 +656,7 @@
                                     Devolución de 30 días garantizado
                                 </div>
                                 <div  class="row">
-                                    <button  class="btn btn-primary" style="background-color: #21c7ed; border-color: #21c7ed;">
+                                    <button  class="btn btn-primary" style="background-color: #21c7ed; border-color: #21c7ed;border-radius: 10px;">
                                         Guardar cotización 
                                     </button>
                                 </div>
@@ -654,7 +669,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4 col-sm-12"     >
+        <div class="col-md-4 col-sm-12">
             <div class="card" id="estesi">
                 <div class="card-body">
                     <div class="row">
@@ -789,12 +804,12 @@
               <div class="container mw-100">
                   <div  class="row">
                      <div class="col" >
-                     <button class="btn btn-primary pull-right" id="mostrarmas" [routerLink]="['vermas']" routerLinkActive="router-link-active">
+                     <button class="btn btn-primary pull-right" id="mostrarmas" [routerLink]="['/vermas']" routerLinkActive="router-link-active">
                          Mostrar más
                      </button>
-                 </div>
+                     </div>
                 </div>
-            </div>
+              </div>
               <div class="card" id="estesi">
                 <div class="card-body">
                     <div class="row">
@@ -816,11 +831,14 @@
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-3">
-                            <div class="row" id="oferta">Oferta</div>
-                            <div class="row" id="letrasgrad">Cotizamático</div>
-                            <div class="row" id="fivth">$5000</div>
+                            <div class="container mw-100">
+                                <div class="row" id="oferta">Oferta</div>
+                                <div class="row" id="letrasgrad">Cotizamático</div>
+                                <div class="row" id="fivth">$5000</div>
+                            </div>
                         </div>
                         <div class="col-md-3 col-sm-3">
+                           <div class="container mw-100 px-0 ">
                             <div class="row">
                                 Precio regular $6,000
                             </div>
@@ -833,18 +851,21 @@
                             <div class="row" id="tan">
                                 TOTAL ANUAL: $1,000.000 
                             </div>
+                           </div>
                         </div>
                         <div class="col-md-3 col-sm-3">
-                            <div class="row">
-                                <button class="btn" id="btnconaho">
-                                    Contratar ahora
-                                </button>
-                            </div>
-                            <div class="row">
-                                Esta cotización es válida por quince días.
+                            <div class="container mw-100">
+                                <div class="row">
+                                    <button class="btn" id="btnconaho">
+                                        Contratar ahora
+                                    </button>
+                                </div>
+                                <div class="row">
+                                    Esta cotización es válida por quince días.
+                                </div>
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
               </div>
               <div class="container mw-100">
@@ -855,7 +876,7 @@
                      </button>
                  </div>
                 </div>
-            </div>
+              </div>
         </div>
     </div>
 
