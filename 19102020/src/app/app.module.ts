@@ -14,6 +14,7 @@ import {Pagina2Component } from './componentes/pagina2/pagina2.component'
 import { NgSelectModule } from '@ng-select/ng-select';
 import { from } from 'rxjs';
 import { NgbModule, NgbPaginationModule,NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { VermasComponent } from './componentes/vermas/vermas.component';
 @NgModule({
   declarations: [AppComponent,
   HeaderComponent,
@@ -22,7 +23,8 @@ import { NgbModule, NgbPaginationModule,NgbAlertModule} from '@ng-bootstrap/ng-b
   InfoaseguradoComponent,
   InfovehiculoComponent,
   Pagina2Component,
-  LayoutComponent
+  LayoutComponent,
+  VermasComponent
 ],
   imports: [
     FormsModule,
@@ -35,6 +37,6 @@ import { NgbModule, NgbPaginationModule,NgbAlertModule} from '@ng-bootstrap/ng-b
      NgbAlertModule
   ],
   providers: [],
-  bootstrap: [AppComponent,HeaderComponent,FooterComponent,InfovehiculoComponent,InfoaseguradoComponent,Pagina1Component,Pagina2Component]
+  bootstrap: [AppComponent,HeaderComponent,FooterComponent,InfovehiculoComponent,InfoaseguradoComponent,Pagina1Component,Pagina2Component, VermasComponent]
 })
 export class AppModule { }
