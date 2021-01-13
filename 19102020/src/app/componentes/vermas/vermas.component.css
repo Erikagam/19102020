@@ -8,3 +8,6 @@
     font: 400;
     background-color: #f4f4f4!important;
   }
+  tr#padou>td{
+    padding: 0rem!important;
+  }
