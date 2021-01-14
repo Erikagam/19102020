@@ -8,6 +8,16 @@
     font: 400;
     background-color: #f4f4f4!important;
   }
+  .card#estesi>div.card-body>div.row{
+    line-height: 52px;
+  }
   tr#padou>td{
     padding: 0rem!important;
   }
+  #fivth{
+    font-family: 'Exo 2', sans-serif;
+    font: 500;
+    font-weight: bold;
+    font-size: 20px;
+    color: #ff6666;
+}
