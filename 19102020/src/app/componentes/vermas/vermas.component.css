@@ -1,14 +1,29 @@
-
+.card#estesi>div.card-body>div.row{
+  line-height: 54px;
+}
 tr.btd>td{
   border: 1px solid #dee2e6!important;
 }
 
 .table td#ultimtab{
   padding: 0rem!important;
+  border-top: none;
+  
+}
+.table td#quitaiz{
+  /* background-clip: padding-box !important; */
+   border-bottom-left-radius: 10px!important;
+  
+}
+.table td#quitade{
+  /* background-clip: padding-box !important; */
+  border-bottom-right-radius: 10px!important;
+  
+
 }
 #estesi{
     border-radius: 2.25rem !important;
-    margin-top: 20px;
+    margin-top: 187px;
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -40,8 +55,9 @@ tr#padou>td>img{
 
 @media (max-width: 576px) { 
   .card#estesi > div.card-body> div.row {
-    line-height: 51px;
+    line-height: 52px!important;
   }
+ 
   #estesi{
     margin-top: 199px;
     /* font-size: 12px; */
