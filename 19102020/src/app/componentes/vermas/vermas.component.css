@@ -1,3 +1,11 @@
+
+tr.btd>td{
+  border: 1px solid #dee2e6!important;
+}
+
+.table td#ultimtab{
+  padding: 0rem!important;
+}
 #estesi{
     border-radius: 2.25rem !important;
     margin-top: 20px;
