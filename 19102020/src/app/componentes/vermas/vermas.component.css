@@ -13,6 +13,8 @@
   }
   tr#padou>td{
     padding: 0rem!important;
+    background-color: white !important;
+    border-top: 1px solid #fdfeff;
   }
   #fivth{
     font-family: 'Exo 2', sans-serif;
@@ -21,3 +23,18 @@
     font-size: 20px;
     color: #ff6666;
 }
+tr#padou>td>img{
+  height:93px;
+  width: 93px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+@media (max-width: 576px) { 
+  .card#estesi > div.card-body> div.row {
+    line-height: 38px;
+  }
+  #estesi{
+    margin-top: 199px;
+  }
+ }
