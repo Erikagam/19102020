@@ -32,9 +32,19 @@ tr#padou>td>img{
 
 @media (max-width: 576px) { 
   .card#estesi > div.card-body> div.row {
-    line-height: 38px;
+    line-height: 51px;
   }
   #estesi{
     margin-top: 199px;
+    /* font-size: 12px; */
   }
+  /* .card-body{
+    line-height: 78px;
+  } */
+
+
+ .col-4.col-md-9{ 
+   padding-left: 0px!important;
+padding-right: 23px!important;
+}
  }
